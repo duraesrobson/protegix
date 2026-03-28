@@ -1,3 +1,3 @@
 export function App() {
-  return <>PROTEGIX</>
+  return <h1>PROTEGIX</h1>
 }
