@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 203.5 226.5">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#Gradiente_sem_nome_217);
+        stroke-width: 0px;
+      }
+    </style>
+    <linearGradient id="Gradiente_sem_nome_217" data-name="Gradiente sem nome 217" x1="101.75" y1="218.26" x2="101.75" y2="8.24" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0ea5e9"/>
+      <stop offset=".46" stop-color="#10a4e6"/>
+      <stop offset=".75" stop-color="#19a1dd"/>
+      <stop offset=".98" stop-color="#279ccf"/>
+      <stop offset="1" stop-color="#299cce"/>
+    </linearGradient>
+  </defs>
+  <polygon class="cls-1" points="2.77 8.24 2.77 157.05 64.73 194.79 64.73 72.49 139.38 72.49 139.38 117.78 101.71 142.82 76.2 127.04 76.2 157.37 101.81 172.71 164.08 131.26 164.08 47.31 39.07 47.31 39.07 149.69 28.08 142.82 28.08 34.39 175.55 34.39 175.55 142.33 101.72 188.23 76.69 173.43 76.69 202.68 101.75 218.26 200.73 157.04 200.73 8.24 2.77 8.24"/>
+</svg>

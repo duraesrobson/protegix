@@ -17,6 +17,9 @@ body {
     sans-serif;
   background: var(--color-bg);
   color: var(--color-text);
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 a {
   color: inherit;
@@ -34,6 +37,6 @@ img {
 }
 
 .container {
-  width: min(100% - 32px, var(--container-width));
+  max-width: var(--container-width);
   margin: 0 auto;
 }

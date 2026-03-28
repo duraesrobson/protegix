@@ -1,5 +1,5 @@
 :root {
-  --color-bg: #010b23;
+  --color-bg: linear-gradient(180deg, #020617 0%, #010b23 100%);
   --color-surface: #07142f;
   --color-surface-alt: #0c1b3d;
   --color-primary: #0ea5e9;
