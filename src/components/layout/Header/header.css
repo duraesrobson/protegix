@@ -1,0 +1,15 @@
+.header-nav-desktop {
+  border: 1px solid var(--color-border);
+  border-radius: 60px;
+  padding: 2px 50px;
+
+  a {
+    color: var(--color-text-muted);
+  }
+}
+
+.MuiPaper-elevation {
+  a {
+    color: var(--color-text-muted);
+  }
+}
