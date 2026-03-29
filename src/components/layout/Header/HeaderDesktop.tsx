@@ -6,13 +6,14 @@ import logo from "../../../assets/protegix-icon.svg"
 import { headerNavLinks } from "./HeaderNavLinks"
 import "./header.css"
 
-export default function Header() {
+export default function HeaderDesktop() {
   return (
     <AppBar
-      className="header"
+      className="header-desktop"
+      component="header"
       position="sticky"
-      elevation={20}
-      sx={{ background: "none", borderBottom: "1px solid var(--color-border)" }}
+      elevation={0}
+      sx={{ background: "var(--color-bg)", borderBottom: "1px solid var(--color-border)" }}
     >
       <Toolbar
         disableGutters

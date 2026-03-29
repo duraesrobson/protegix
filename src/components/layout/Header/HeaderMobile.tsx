@@ -4,17 +4,19 @@ import { useState } from "react"
 import NavItem from "../../ui/NavItem"
 import logoMobile from "../../../assets/protegix-icon.svg"
 import { headerNavLinks } from "./HeaderNavLinks"
+import "./header.css"
 
-export default function Header() {
+
+export default function HeaderMobile() {
   const [openDrawer, setOpenDrawer] = useState(false)
 
   return (
     <AppBar
       component="header"
       position="sticky"
-      elevation={20}
+      elevation={0}
       sx={{
-        background: "none",
+        background: "var(--color-bg)",
         color: "var(--color-text)",
         borderBottom: "1px solid var(--color-border)"
       }}

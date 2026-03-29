@@ -1,11 +1,13 @@
 import type { PropsWithChildren } from "react"
 import Header from "./Header/Header"
+import Footer from "./Footer/Footer"
 
 export default function AppLayout({ children }: PropsWithChildren) {
   return (
-    <>
+    <div className="app-layout">
       <Header />
-      <main>{children}</main>
-    </>
+      <main className="app-main">{children}</main>
+      <Footer />
+    </div>
   )
 }
