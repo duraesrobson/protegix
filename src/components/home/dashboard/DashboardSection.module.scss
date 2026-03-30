@@ -1,0 +1,25 @@
+.dashboardSection {
+  position: relative;
+  z-index: 10;
+}
+
+.dashboardInner {
+  background: transparent;
+}
+
+.dashboardHeader {
+  padding: 20px 0;
+  border-bottom: solid 1px var(--color-border);
+  margin-bottom: 40px;
+
+  .dashboardTitle {
+    background: linear-gradient(
+      180deg,
+      var(--color-text) 0%,
+      var(--color-primary) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}

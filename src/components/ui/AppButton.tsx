@@ -32,11 +32,12 @@ export default function AppButton({
   variant = "primary"
 }: AppButtonProps) {
   const currentStyle = buttonStyles[variant]
+  const isAnchor = to.startsWith("#")
 
   return (
     <Button
-      component={NavLink}
-      to={to}
+      component={isAnchor ? "a" : NavLink}
+      {...(isAnchor ? { href: to } : { to })}
       sx={{
         color: currentStyle.color,
         background: currentStyle.bg,
