@@ -1,5 +1,9 @@
+import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined"
+import SchoolOutlinedIcon from "@mui/icons-material/SchoolOutlined"
+import QuizOutlinedIcon from "@mui/icons-material/QuizOutlined"
+
 export const headerNavLinks = [
-  { to: "/", label: "Início" },
-  { to: "/aprenda", label: "Aprenda" },
-  { to: "/quiz", label: "Quiz" }
+  { to: "/", label: "Início", icon: HomeOutlinedIcon },
+  { to: "/aprenda", label: "Aprenda", icon: SchoolOutlinedIcon },
+  { to: "/quiz", label: "Quiz", icon: QuizOutlinedIcon}
 ]

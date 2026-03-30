@@ -1,11 +1,11 @@
 import { AppBar, Toolbar, Box, IconButton, Drawer } from "@mui/material"
 import MenuIcon from "@mui/icons-material/Menu"
+import CloseIcon from "@mui/icons-material/Close"
 import { useState } from "react"
 import NavItem from "../../ui/NavItem"
 import logoMobile from "../../../assets/protegix-icon.svg"
 import { headerNavLinks } from "./HeaderNavLinks"
 import "./header.css"
-
 
 export default function HeaderMobile() {
   const [openDrawer, setOpenDrawer] = useState(false)
@@ -41,7 +41,7 @@ export default function HeaderMobile() {
             sx={{ color: "var(--color-text-muted)" }}
           >
             <MenuIcon
-            className="header-menu-button-icon"
+              className="header-menu-button-icon"
               sx={{
                 width: 40,
                 height: "auto"
@@ -57,18 +57,50 @@ export default function HeaderMobile() {
           slotProps={{
             paper: {
               sx: {
-                p: 5,
-                gap: 2,
-                overflowY: "hidden"
+                width: "60%",
+                px: 3,
+                pt: 3,
+                gap: 3,
+                overflowY: "hidden",
+                borderRight: "3px solid var(--color-border)"
               }
             }
           }}
         >
-          {headerNavLinks.map(link => (
-            <NavItem key={link.to} to={link.to} end>
-              {link.label}
-            </NavItem>
-          ))}
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+              pb: 2,
+              fontSize: 20,
+              color: "var(--color-text-muted)",
+              fontWeight: 600,
+              alignItems: "center",
+              borderBottom: "1px solid var(--color-border)"
+            }}
+          >
+            Menu
+            <IconButton
+              aria-label="fechar menu"
+              onClick={() => setOpenDrawer(false)}
+              sx={{
+                color: "var(--color-primary)",
+                p: 0
+              }}
+            >
+              <CloseIcon />
+            </IconButton>
+          </Box>
+          {headerNavLinks.map(link => {
+            const Icon = link.icon
+
+            return (
+              <NavItem key={link.to} to={link.to} end>
+                <Icon sx={{ fontSize: 20 }} />
+                {link.label}
+              </NavItem>
+            )
+          })}
         </Drawer>
 
         <div className="header-logo">
