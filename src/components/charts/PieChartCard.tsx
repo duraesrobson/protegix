@@ -1,20 +1,21 @@
 import { useEffect, useState } from "react"
 import { db } from "../../lib/firebase"
+import Stack from "@mui/material/Stack"
 import { collection, onSnapshot, query, where } from "firebase/firestore"
 import { PieChart, pieClasses } from "@mui/x-charts/PieChart"
 import type { DefaultizedPieValueType } from "@mui/x-charts/models"
+import { chartPalette } from "./ChartCollorPallets" // importando a paleta de cores
 
 interface PieProps {
   perguntaId: string
   titulo: string
 }
 
-// mui pie chart espera um id unico para cada fatia alem de label e value
 interface PieData {
   id: string | number
   label: string
   value: number
-  color?: string
+  color?: string // a cor agora faz parte do objeto de dados
 }
 
 export default function PieChartCard({ perguntaId, titulo }: PieProps) {
@@ -37,35 +38,56 @@ export default function PieChartCard({ perguntaId, titulo }: PieProps) {
         }
       })
 
-      // formatando para o piechart (o id é obrigatorio aqui)
-      const formatted: PieData[] = Object.keys(counts).map((key, index) => ({
+      // cria os dados basicos e ordena para manter a consistencia
+      const rawData = Object.keys(counts)
+        .map(key => ({
+          label: key,
+          value: counts[key]
+        }))
+        .sort((a, b) => a.label.localeCompare(b.label))
+
+      // mapeia as cores da paleta baseada no indice ordenado
+      const formatted: PieData[] = rawData.map((item, index) => ({
         id: index,
-        label: key,
-        value: counts[key]
+        ...item,
+        color: chartPalette[index % chartPalette.length] // injeta a cor definida no tema
       }))
 
-      // ordena alfabeticamente para manter o padrao do dashboard
-      setData(formatted.sort((a, b) => a.label.localeCompare(b.label)))
+      setData(formatted)
       setLoading(false)
     })
 
     return () => unsubscribe()
   }, [perguntaId])
 
-  // calculo do total dinamico baseado no estado atual
   const total = data.reduce((acc, item) => acc + item.value, 0)
 
-  // funcao para gerar a label de porcentagem dentro da fatia
   const getArcLabel = (params: DefaultizedPieValueType) => {
     if (total === 0) return ""
     const percent = params.value / total
     return `${(percent * 100).toFixed(0)}%`
   }
 
-  if (loading) return <p>carregando...</p>
+  if (loading)
+    return (
+      <p style={{ textAlign: "center", color: "var(--color-text-muted)" }}>
+        carregando...
+      </p>
+    )
 
   return (
-    <div>
+    <div
+      style={{
+        width: "100%",
+        flex: 1,
+        minWidth: "300px",
+        maxWidth: "100%",
+        backgroundColor: "var(--color-surface)",
+        border: "1px solid var(--color-border)",
+        padding: "15px",
+        borderRadius: "8px"
+      }}
+    >
       <h3>{titulo}</h3>
 
       {data.length > 0 ? (
@@ -74,23 +96,37 @@ export default function PieChartCard({ perguntaId, titulo }: PieProps) {
             {
               data,
               arcLabel: getArcLabel,
-              arcLabelMinAngle: 35, // so mostra a porcentagem se a fatia for grande o suficiente
+              arcLabelMinAngle: 35,
               outerRadius: 100,
               highlightScope: { fade: "global", highlight: "item" },
-              faded: { innerRadius: 30, additionalRadius: -30, color: "gray" }
+              // configuracao do efeito de fade usando as cores do tema
+              faded: {
+                innerRadius: 30,
+                additionalRadius: -30,
+                color: "var(--color-surface-alt)"
+              }
             }
           ]}
           sx={{
             [`& .${pieClasses.root}`]: {
-              fill: "white",
               fontWeight: "bold"
+            },
+            // cor do texto das etiquetas dentro do grafico
+            [`& .MuiPieArcLabel-root`]: {
+              fill: "var(--color-text-inverse)",
+              fontSize: 14
             }
           }}
-          width={250}
-          height={250}
+          // configuracao da legenda para manter o visual limpo
+          slotProps={{
+            legend: { sx: { color: "var(--color-text-muted)" } }
+          }}
+          height={260}
         />
       ) : (
-        <p>sem dados para exibir.</p>
+        <p style={{ color: "var(--color-text-muted)" }}>
+          sem dados para exibir.
+        </p>
       )}
     </div>
   )

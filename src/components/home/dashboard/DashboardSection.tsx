@@ -16,18 +16,21 @@ export default function DashboardSection() {
             partir das respostas do formulário.
           </p>
         </div>
-        <BarChartCard
-          perguntaId="p1"
-          titulo="Pergunta 1"
-        />
-        <PieChartCard
-          perguntaId="p2"
-          titulo="Pergunta 2"
-        />
-        <PiePaddingChartCard
-          perguntaId="p1"
-          titulo="Pergunta 3"
-        />
+        <div className={styles.chartsContainer}>
+          <div className={styles.barCharts}>
+            <BarChartCard perguntaId="p1" titulo="Pergunta 1" />
+          </div>
+          <div className={styles.pieCharts}>
+            <PieChartCard perguntaId="p2" titulo="Pergunta 2" />
+            <PiePaddingChartCard perguntaId="p1" titulo="Pergunta 3" />
+            <PiePaddingChartCard perguntaId="p1" titulo="Pergunta 3" />
+          </div>
+          <div className={styles.barCharts}>
+            <BarChartCard perguntaId="p1" titulo="Pergunta 1" />
+            <BarChartCard perguntaId="p1" titulo="Pergunta 1" />
+            <BarChartCard perguntaId="p1" titulo="Pergunta 1" />
+          </div>
+        </div>
       </div>
     </section>
   )

@@ -1,30 +1,29 @@
 import { useEffect, useState } from "react"
-import { db } from "../../lib/firebase" // ajuste o caminho se necessario
+import { db } from "../../lib/firebase"
 import { collection, onSnapshot, query, where } from "firebase/firestore"
 import { PieChart, pieClasses } from "@mui/x-charts/PieChart"
 import type { PieValueType } from "@mui/x-charts/models"
 import Stack from "@mui/material/Stack"
+import { chartPalette } from "./ChartCollorPallets" // Sua paleta centralizada
 
 interface PiePaddingChartProps {
-  perguntaId: string // ex: "p1"
+  perguntaId: string
   titulo: string
-  // variant permite escolher o estilo visual
   variant?: "donut" | "gauge"
   hideLegend?: boolean
 }
 
-// interface para os dados tipados do mui charts
 interface PiePaddingChartData extends PieValueType {
   id: string | number
   label: string
   value: number
+  color?: string // Adicionado para suportar sua paleta
 }
 
 export default function PiePaddingChartCard({
   perguntaId,
   titulo,
-  variant = "donut", // padrao e o donut completo
-  hideLegend = false
+  variant = "donut"
 }: PiePaddingChartProps) {
   const [data, setData] = useState<PiePaddingChartData[]>([])
   const [loading, setLoading] = useState(true)
@@ -45,14 +44,20 @@ export default function PiePaddingChartCard({
         }
       })
 
-      // formata e ordena alfabeticamente para o dashboard
-      const formatted: PiePaddingChartData[] = Object.keys(counts)
-        .map((key, index) => ({
+      // ordena as chaves para garantir consistência de cores
+      const sortedLabels = Object.keys(counts).sort((a, b) =>
+        a.localeCompare(b)
+      )
+
+      // mapeia os dados injetando a cor da sua paleta
+      const formatted: PiePaddingChartData[] = sortedLabels.map(
+        (key, index) => ({
           id: index,
           label: key,
-          value: counts[key]
-        }))
-        .sort((a, b) => a.label.localeCompare(b.label))
+          value: counts[key],
+          color: chartPalette[index % chartPalette.length] // Aplica a cor do theme.css
+        })
+      )
 
       setData(formatted)
       setLoading(false)
@@ -63,67 +68,68 @@ export default function PiePaddingChartCard({
 
   if (loading) return <p>carregando...</p>
 
-  // configuracoes especificas para cada variante
   const gaugeSettings =
     variant === "gauge"
       ? {
-          startAngle: -90, // comeca na esquerda (9 horas)
-          endAngle: 90, // termina na direita (3 horas)
-          cy: "100%" // move o centro para a base do container
+          startAngle: -90,
+          endAngle: 90,
+          cy: "100%"
         }
-      : {} // donut nao precisa de angulos extras
+      : {}
 
   return (
-    <div>
+    <div
+      style={{
+        width: "100%",
+        flex: 1,
+        minWidth: "300px",
+        maxWidth: "100%",
+        backgroundColor: "var(--color-surface)",
+        border: "1px solid var(--color-border)",
+        padding: "15px",
+        borderRadius: "8px"
+      }}
+    >
       <h3>{titulo}</h3>
 
       {data.length > 0 ? (
-        <Stack
-          width={250}
-          height={250}
-        >
-          <PieChart
-            series={[
-              {
-                data,
-                paddingAngle: 5, // espaçamento entre as fatias
-                innerRadius: "60%", // cria o buraco do donut/gauge
-                outerRadius: "100%", // preenche o container
-                cornerRadius: 5, // bordas arredondadas (moderno)
-                // espaco para interacoes
-                highlightScope: { fade: "global", highlight: "item" },
-                faded: {
-                  innerRadius: 30,
-                  additionalRadius: -30,
-                  color: "gray"
-                },
-
-                // espalha as labels de porcentagem se tiver espaço
-                arcLabelMinAngle: 20,
-
-                ...gaugeSettings // aplica as config de angulo se for gauge
-              }
-            ]}
-            sx={{
-              [`& .${pieClasses.root}`]: {
-                fill: "white",
-                fontWeight: "bold",
-                fontSize: 14
-              }
-            }}
-            hideLegend={hideLegend}
-            // remove margens para o gauge nao ficar pequeno
-            margin={
-              variant === "gauge"
-                ? { top: 0, bottom: 0, left: 10, right: 10 }
-                : undefined
+        <PieChart
+          series={[
+            {
+              data,
+              paddingAngle: 5,
+              innerRadius: "80%",
+              outerRadius: "60%",
+              cornerRadius: 5,
+              highlightScope: { fade: "global", highlight: "item" },
+              faded: {
+                innerRadius: 75,
+                additionalRadius: -20,
+                color: "var(--color-surface-alt)"
+              },
+              arcLabelMinAngle: 20,
+              ...gaugeSettings
             }
-          />
-        </Stack>
+          ]}
+          sx={{
+            [`& .${pieClasses.root}`]: {
+              fill: "white",
+              fontWeight: "bold",
+              fontSize: 14
+            }
+          }}
+          slotProps={{
+            legend: {
+              sx: {
+                color: "var(--color-text-muted)"
+              }
+            }
+          }}
+          // Centraliza o SVG dentro do container
+          height={260}
+        />
       ) : (
-        <p style={{ textAlign: "center", color: "#666", fontStyle: "italic" }}>
-          sem dados para exibir.
-        </p>
+        <p>sem dados para exibir.</p>
       )}
     </div>
   )

@@ -1,5 +1,6 @@
 .dashboardSection {
   position: relative;
+  padding: 60px 0;
   z-index: 10;
 }
 
@@ -22,4 +23,18 @@
     background-clip: text;
     color: transparent;
   }
+}
+
+.chartsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.pieCharts, .barCharts, .lineAreaCharts {
+  display: flex;
+  flex-wrap: wrap; // Permite quebrar linha em telas pequenas
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
 }

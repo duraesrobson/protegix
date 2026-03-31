@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { db } from "../../lib/firebase"
 import { collection, onSnapshot, query, where } from "firebase/firestore"
 import { BarChart } from "@mui/x-charts/BarChart"
+import { chartPalette } from "./ChartCollorPallets"
 
 interface BarChartProps {
   perguntaId: string // ex: "p1", "p2"...
@@ -67,7 +68,18 @@ export default function BarChartCard({ perguntaId, titulo }: BarChartProps) {
   }
 
   return (
-    <div>
+    <div
+      style={{
+        width: "100%",
+        flex: 1,
+        minWidth: "300px",
+        maxWidth: "100%",
+        backgroundColor: "var(--color-surface)",
+        border: "1px solid var(--color-border)",
+        padding: "15px",
+        borderRadius: "8px"
+      }}
+    >
       <h3>{titulo}</h3>
 
       {data.length > 0 ? (
@@ -75,15 +87,27 @@ export default function BarChartCard({ perguntaId, titulo }: BarChartProps) {
           dataset={data}
           xAxis={[
             {
-              dataKey: "label"
+              dataKey: "label",
+              tickLabelStyle: { fill: "var(--color-text-muted)" }
+            }
+          ]}
+          yAxis={[
+            {
+              tickLabelStyle: { fill: "var(--color-text-muted)" }
             }
           ]}
           series={[
             {
               dataKey: "value",
-              label: "Total"
+              label: "Total de Respostas",
+              colorGetter: params => {
+                return chartPalette[params.dataIndex % chartPalette.length]
+              }
             }
           ]}
+          slotProps={{
+            legend: { sx: { display: "none" } }
+          }}
           height={300}
         />
       ) : (

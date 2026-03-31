@@ -13,14 +13,14 @@ const buttonStyles = {
   primary: {
     color: "var(--color-text)",
     bg: "var(--color-bg)",
-    border: "1px solid var(--color-border)",
+    border: "1.5px solid var(--color-border)",
     hoverColor: "var(--color-text)",
     hoverBorder: "var(--color-primary)"
   },
   secondary: {
     color: "var(--color-text-inverse)",
     bg: "#ffffff",
-    border: "1px solid transparent",
+    border: "1.5px solid transparent",
     hoverColor: "var(--color-text-inverse)",
     hoverBorder: "var(--color-primary)"
   }
@@ -45,8 +45,8 @@ export default function AppButton({
         textTransform: "none",
         fontWeight: 600,
         fontSize: {
-          xs: "0.7rem",
-          sm: "1rem"
+          xs: "0.9rem",
+          sm: "1.3rem"
         },
         lineHeight: 1,
         minWidth: 0,
