@@ -1,45 +1,94 @@
-import { useEffect, useState } from "react";
-import { db } from "../../lib/firebase";
-import { collection, onSnapshot } from "firebase/firestore";
-import { BarChart } from "@mui/x-charts/BarChart";
+import { useEffect, useState } from "react"
+import { db } from "../../lib/firebase"
+import { collection, onSnapshot, query, where } from "firebase/firestore"
+import { BarChart } from "@mui/x-charts/BarChart"
 
-export default function BarChartCard() {
-  const [data, setData] = useState<{ label: string; value: number }[]>([]);
-  const [loading, setLoading] = useState(true);
+interface BarChartProps {
+  perguntaId: string // ex: "p1", "p2"...
+  titulo: string // o texto da pergunta
+}
+
+interface BarChartData {
+  label: string
+  value: number
+  [key: string]: string | number | undefined
+}
+
+export default function BarChartCard({ perguntaId, titulo }: BarChartProps) {
+  const [data, setData] = useState<BarChartData[]>([])
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    // onSnapshot permite atualização em tempo real (Real-time)
-    const unsubscribe = onSnapshot(collection(db, "respostas"), (snapshot) => {
-      const counts: Record<string, number> = {};
-      
-      snapshot.forEach((doc) => {
-        const res = doc.data().opcao; // Supondo campo 'opcao' no Firestore
-        if (res) {
-          counts[res] = (counts[res] || 0) + 1;
-        }
-      });
+    // cria a query filtrando pela pergunta especifica
+    const q = query(
+      collection(db, "respostas"),
+      where("perguntaId", "==", perguntaId)
+    )
 
-      const formattedData = Object.keys(counts).map((key) => ({
-        label: key,
-        value: counts[key],
-      }));
+    // escuta o firebase em tempo real
+    const unsubscribe = onSnapshot(
+      q,
+      snapshot => {
+        const counts: Record<string, number> = {}
 
-      setData(formattedData);
-      setLoading(false);
-    });
+        snapshot.forEach(doc => {
+          const res = doc.data().opcao
+          if (res) {
+            counts[res] = (counts[res] || 0) + 1
+          }
+        })
 
-    return () => unsubscribe(); // Cleanup ao desmontar
-  }, []);
+        // transforma o objeto de contagem em array para o mui charts
+        const formatted = Object.keys(counts).map(key => ({
+          label: key,
+          value: counts[key]
+        }))
 
-  if (loading) return <p>Carregando dados das respostas...</p>;
+        // ordena alfabeticamente pelo label (a, b, c...)
+        const sortedData = formatted.sort((a, b) =>
+          a.label.localeCompare(b.label)
+        )
+
+        setData(sortedData)
+        setLoading(false)
+      },
+      error => {
+        console.error("erro ao buscar dados do firebase:", error)
+        setLoading(false)
+      }
+    )
+
+    // limpa o listener ao desmontar o componente
+    return () => unsubscribe()
+  }, [perguntaId])
+
+  if (loading) {
+    return <p style={{ textAlign: "center" }}>carregando gráfico...</p>
+  }
 
   return (
-    <BarChart
-      dataset={data}
-      xAxis={[{ scaleType: 'band', dataKey: 'label' }]}
-      series={[{ dataKey: 'value', label: 'Total de Respostas' }]}
-      width={500}
-      height={300}
-    />
-  );
+    <div>
+      <h3>{titulo}</h3>
+
+      {data.length > 0 ? (
+        <BarChart
+          dataset={data}
+          xAxis={[
+            {
+              dataKey: "label"
+            }
+          ]}
+          series={[
+            {
+              dataKey: "value",
+              label: "Total"
+            }
+          ]}
+          height={300}
+        />
+      ) : (
+        <p>nenhuma resposta encontrada para esta pergunta.</p>
+      )}
+    </div>
+  )
 }

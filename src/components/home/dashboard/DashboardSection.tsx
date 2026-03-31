@@ -1,4 +1,6 @@
 import BarChartCard from "../../charts/BarChartCard"
+import PieChartCard from "../../charts/PieChartCard"
+import PiePaddingChartCard from "../../charts/PiePaddingChartCard"
 import styles from "./DashboardSection.module.scss"
 
 export default function DashboardSection() {
@@ -14,7 +16,18 @@ export default function DashboardSection() {
             partir das respostas do formulário.
           </p>
         </div>
-        <BarChartCard />
+        <BarChartCard
+          perguntaId="p1"
+          titulo="Pergunta 1"
+        />
+        <PieChartCard
+          perguntaId="p2"
+          titulo="Pergunta 2"
+        />
+        <PiePaddingChartCard
+          perguntaId="p1"
+          titulo="Pergunta 3"
+        />
       </div>
     </section>
   )
