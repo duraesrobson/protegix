@@ -29,7 +29,7 @@ export default function DashboardSection() {
           <div className={styles.barCharts}>
             <BarChartCard perguntaId="p1" titulo="Pergunta 1" />
             <BarChartCard perguntaId="p1" titulo="Pergunta 1" />
-            <BarChartCard perguntaId="p1" titulo="Pergunta 1" />
+            <BarChartCard perguntaId="p3" titulo="Sim ou Não" />
           </div>
         </div>
       </div>
