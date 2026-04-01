@@ -3,8 +3,8 @@ import { db } from "../../lib/firebase"
 import { collection, onSnapshot, query, where } from "firebase/firestore"
 import { PieChart, pieClasses } from "@mui/x-charts/PieChart"
 import type { PieValueType } from "@mui/x-charts/models"
-import Stack from "@mui/material/Stack"
-import { chartPalette } from "./ChartCollorPallets" // Sua paleta centralizada
+import { chartPalette } from "./ChartCollorPallets"
+import styles from "./ChartStyles.module.scss"
 
 interface PiePaddingChartProps {
   perguntaId: string
@@ -78,18 +78,7 @@ export default function PiePaddingChartCard({
       : {}
 
   return (
-    <div
-      style={{
-        width: "100%",
-        flex: 1,
-        minWidth: "300px",
-        maxWidth: "100%",
-        backgroundColor: "var(--color-surface)",
-        border: "1px solid var(--color-border)",
-        padding: "15px",
-        borderRadius: "8px"
-      }}
-    >
+    <div className={styles.piePaddingChartContainer}>
       <h3>{titulo}</h3>
 
       {data.length > 0 ? (

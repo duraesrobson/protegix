@@ -3,6 +3,7 @@ import { db } from "../../lib/firebase"
 import { collection, onSnapshot, query, where } from "firebase/firestore"
 import { BarChart } from "@mui/x-charts/BarChart"
 import { chartPalette } from "./ChartCollorPallets"
+import styles from "./ChartStyles.module.scss"
 
 interface BarChartProps {
   perguntaId: string // ex: "p1", "p2"...
@@ -68,18 +69,7 @@ export default function BarChartCard({ perguntaId, titulo }: BarChartProps) {
   }
 
   return (
-    <div
-      style={{
-        width: "100%",
-        flex: 1,
-        minWidth: "300px",
-        maxWidth: "100%",
-        backgroundColor: "var(--color-surface)",
-        border: "1px solid var(--color-border)",
-        padding: "15px",
-        borderRadius: "8px"
-      }}
-    >
+    <div className={styles.barChartContainer}>
       <h3>{titulo}</h3>
 
       {data.length > 0 ? (

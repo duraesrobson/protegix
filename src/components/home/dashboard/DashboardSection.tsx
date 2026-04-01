@@ -11,6 +11,7 @@ export default function DashboardSection() {
           <h1 className={`dashboard-title ${styles.dashboardTitle}`}>
             Dashboard
           </h1>
+
           <p className={`dashboardSubtitle ${styles.dashboardSubtitle}`}>
             Acompanhe, de forma visual, os dados e padrões identificados a
             partir das respostas do formulário.

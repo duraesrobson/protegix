@@ -45,7 +45,7 @@ export default function AppButton({
         textTransform: "none",
         fontWeight: 600,
         fontSize: {
-          xs: "0.9rem",
+          xs: "1rem",
           sm: "1.3rem"
         },
         lineHeight: 1,
@@ -55,12 +55,12 @@ export default function AppButton({
           sm: "16px"
         },
         px: {
-          xs: 2,
-          sm: 3
+          xs: 3,
+          sm: 4
         },
         py: {
-          xs: 1.2,
-          sm: 1.5
+          xs: 1.5,
+          sm: 2
         },
         transition: "all 0.2s ease",
 

@@ -1,7 +1,11 @@
 .dashboardSection {
   position: relative;
-  padding: 60px 0;
+  padding: 20px 0 60px;
   z-index: 10;
+  scroll-margin-top: 100px;
+  border-top: 2px solid var(--color-border);
+  border-radius: 50px;
+  margin-bottom: 40px;
 }
 
 .dashboardInner {
@@ -31,10 +35,21 @@
   gap: 40px;
 }
 
-.pieCharts, .barCharts, .lineAreaCharts {
+.pieCharts,
+.barCharts,
+.lineAreaCharts {
   display: flex;
-  flex-wrap: wrap; // Permite quebrar linha em telas pequenas
+  flex-wrap: wrap;
   justify-content: center;
   gap: 40px;
   width: 100%;
+}
+
+@media screen and (max-width: 900px) {
+  .dashboardSection {
+    border-top: 2px solid var(--color-border);
+    border-radius: 50px;
+    text-align: center;
+    padding: 20px 0;
+  }
 }
