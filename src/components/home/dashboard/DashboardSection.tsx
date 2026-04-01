@@ -2,6 +2,7 @@ import BarChartCard from "../../charts/BarChartCard"
 import PieChartCard from "../../charts/PieChartCard"
 import PiePaddingChartCard from "../../charts/PiePaddingChartCard"
 import styles from "./DashboardSection.module.scss"
+import LineChartCard from "../../charts/LineChartCard"
 
 export default function DashboardSection() {
   return (
@@ -18,6 +19,13 @@ export default function DashboardSection() {
           </p>
         </div>
         <div className={styles.chartsContainer}>
+          <div className={styles.barCharts}>
+            <LineChartCard 
+              titulo="Segurança"
+              ids={["seg_navegacao", "seg_bancos", "seg_redes", "seg_compras", "seg_email"]}
+              labels={["Navegação", "Bancos", "Redes", "Compras", "Email"]}
+            />
+          </div>
           <div className={styles.barCharts}>
             <BarChartCard perguntaId="p1" titulo="Pergunta 1" />
           </div>
