@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react"
 import { db } from "../../lib/firebase"
 import { collection, onSnapshot, query, where } from "firebase/firestore"
+import useMediaQuery from "@mui/material/useMediaQuery"
+import { useTheme } from "@mui/material/styles"
 import { PieChart, pieClasses } from "@mui/x-charts/PieChart"
 import type { DefaultizedPieValueType } from "@mui/x-charts/models"
 import { chartPalette } from "./ChartCollorPallets"
@@ -21,6 +23,10 @@ interface PieData {
 export default function PieChartCard({ perguntaId, titulo }: PieProps) {
   const [data, setData] = useState<PieData[]>([])
   const [loading, setLoading] = useState(true)
+
+  // detecção de mobile
+  const theme = useTheme()
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"))
 
   useEffect(() => {
     const q = query(
@@ -86,7 +92,7 @@ export default function PieChartCard({ perguntaId, titulo }: PieProps) {
               data,
               arcLabel: getArcLabel,
               arcLabelMinAngle: 35,
-              outerRadius: 100,
+              outerRadius: isMobile ? 80 : 100,
               highlightScope: { fade: "global", highlight: "item" },
               // configuracao do efeito de fade usando as cores do tema
               faded: {
@@ -108,7 +114,14 @@ export default function PieChartCard({ perguntaId, titulo }: PieProps) {
           }}
           // configuracao da legenda para manter o visual limpo
           slotProps={{
-            legend: { sx: { color: "var(--color-text-muted)" } }
+            legend: {
+              direction: isMobile ? "horizontal" : "vertical",
+              position: {
+                vertical: isMobile ? "bottom" : "middle",
+                horizontal: isMobile ? "center" : "end"
+              },
+              sx: { color: "var(--color-text-muted)" }
+            }
           }}
           height={260}
         />

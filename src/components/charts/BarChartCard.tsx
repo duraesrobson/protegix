@@ -96,9 +96,12 @@ export default function BarChartCard({ perguntaId, titulo }: BarChartProps) {
             }
           ]}
           slotProps={{
-            legend: { sx: { display: "none" } }
+            legend: {
+              sx: { display: "none" }
+            }
           }}
-          height={300}
+          height={260}
+          margin={{ top: 40, left: -10, bottom: 0 }}
         />
       ) : (
         <p>nenhuma resposta encontrada para esta pergunta.</p>

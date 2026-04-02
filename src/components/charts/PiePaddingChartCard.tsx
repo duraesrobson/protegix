@@ -28,6 +28,15 @@ export default function PiePaddingChartCard({
   const [data, setData] = useState<PiePaddingChartData[]>([])
   const [loading, setLoading] = useState(true)
 
+  // 1. Calcule o total de respostas
+  const totalRespostas = data.reduce((acc, item) => acc + item.value, 0)
+
+  // Função para o Tooltip (Hover)
+  const valueFormatter = (item: { value: number }) => {
+    const percent = ((item.value / totalRespostas) * 100).toFixed(1)
+    return `${item.value} respostas (${percent}%)`
+  }
+
   useEffect(() => {
     const q = query(
       collection(db, "respostas"),
@@ -87,10 +96,11 @@ export default function PiePaddingChartCard({
             {
               data,
               paddingAngle: 5,
-              innerRadius: "80%",
-              outerRadius: "60%",
+              innerRadius: "60%",
+              outerRadius: "80%",
               cornerRadius: 5,
               highlightScope: { fade: "global", highlight: "item" },
+              valueFormatter,
               faded: {
                 innerRadius: 75,
                 additionalRadius: -20,
@@ -109,6 +119,11 @@ export default function PiePaddingChartCard({
           }}
           slotProps={{
             legend: {
+              direction: "horizontal",
+              position: {
+                vertical: "bottom",
+                horizontal: "center"
+              },
               sx: {
                 color: "var(--color-text-muted)"
               }

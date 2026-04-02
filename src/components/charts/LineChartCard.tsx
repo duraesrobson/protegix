@@ -3,7 +3,6 @@ import { db } from "../../lib/firebase"
 import { collection, onSnapshot, query, where } from "firebase/firestore"
 import { LineChart } from "@mui/x-charts/LineChart"
 import type { MarkElementProps } from "@mui/x-charts/LineChart"
-import Box from "@mui/material/Box"
 import styles from "./ChartStyles.module.scss"
 
 interface LineChartProps {
@@ -13,21 +12,18 @@ interface LineChartProps {
 }
 
 export default function LineChartCard({ ids, labels, titulo }: LineChartProps) {
- const [pData, setPData] = useState<number[]>([])
+  const [pData, setPData] = useState<number[]>([])
   const [totalRespostas, setTotalRespostas] = useState<number>(0) // começa com zero
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    const q = query(
-      collection(db, "respostas"),
-      where("perguntaId", "in", ids)
-    )
+    const q = query(collection(db, "respostas"), where("perguntaId", "in", ids))
 
-    const unsubscribe = onSnapshot(q, (snapshot) => {
+    const unsubscribe = onSnapshot(q, snapshot => {
       const somaPorId: Record<string, number> = {}
       const contagemPorId: Record<string, number> = {}
 
-      snapshot.forEach((doc) => {
+      snapshot.forEach(doc => {
         const { perguntaId, opcao } = doc.data()
         const valorNumerico = parseInt(opcao.replace("%", "")) || 0
 
@@ -41,7 +37,7 @@ export default function LineChartCard({ ids, labels, titulo }: LineChartProps) {
         setTotalRespostas(contagemPorId[primeiroId] || 0)
       }
 
-      const medias = ids.map((id) => {
+      const medias = ids.map(id => {
         const total = somaPorId[id] || 0
         const qtd = contagemPorId[id] || 1
         return Math.round(total / qtd)
@@ -67,7 +63,7 @@ export default function LineChartCard({ ids, labels, titulo }: LineChartProps) {
             textAnchor: "middle",
             fill: "var(--color-text)",
             fontSize: 12,
-            fontWeight: "bold",
+            fontWeight: "bold"
           }}
         >
           {pData[dataIndex]}%
@@ -79,38 +75,37 @@ export default function LineChartCard({ ids, labels, titulo }: LineChartProps) {
   if (loading) return <p>carregando média de segurança...</p>
 
   return (
-    <div className={styles.barChartContainer}>
+    <div className={styles.lineChartContainer}>
       <h3>{titulo}</h3>
       <p className="teste">Total de respostas: {totalRespostas}</p>
-      <Box sx={{ width: "100%", height: 350, mt: 2 }}>
-        <LineChart
-          series={[
-            {
-              data: pData,
-              label: "Nível de Segurança Médio",
-              area: true, // efeito visual preenchido embaixo da linha
-              color: "var(--color-primary)",
-            },
-          ]}
-          xAxis={[
-            {
-              scaleType: "point",
-              data: labels,
-              tickLabelStyle: { fill: "var(--color-text-muted)", fontSize: 11 },
-            },
-          ]}
-          yAxis={[
-            {
-              min: 0,
-              max: 100,
-              valueFormatter: (value: any) => `${value}%`,
-              tickLabelStyle: { fill: "var(--color-text-muted)"},
-            },
-          ]}
-          slots={{ mark: CustomMark }}
-          margin={{ right: 30, left: 40, top: 40 }}
-        />
-      </Box>
+      <LineChart
+        series={[
+          {
+            data: pData,
+            label: "Nível de Segurança Médio",
+            area: true, // efeito visual preenchido embaixo da linha
+            color: "var(--color-primary)"
+          }
+        ]}
+        xAxis={[
+          {
+            scaleType: "point",
+            data: labels,
+            tickLabelStyle: { fill: "var(--color-text-muted)", fontSize: 11 }
+          }
+        ]}
+        yAxis={[
+          {
+            min: 0,
+            max: 100,
+            valueFormatter: (value: any) => `${value}%`,
+            tickLabelStyle: { fill: "var(--color-text-muted)", padding: 10 }
+          }
+        ]}
+        margin={{ right: 30, left: 20, top: 40 }}
+        slots={{ mark: CustomMark }}
+        height={350}
+      />
     </div>
   )
 }
