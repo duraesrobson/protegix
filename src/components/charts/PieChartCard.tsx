@@ -120,7 +120,9 @@ export default function PieChartCard({ perguntaId, titulo }: PieProps) {
                 vertical: isMobile ? "bottom" : "middle",
                 horizontal: isMobile ? "center" : "end"
               },
-              sx: { color: "var(--color-text-muted)" }
+              sx: {
+                color: "var(--color-text-muted)"
+              }
             }
           }}
           height={260}

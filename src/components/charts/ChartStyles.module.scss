@@ -21,3 +21,17 @@
     margin: 0;
   }
 }
+
+@media screen and (max-width: 900px) {
+.barChartContainer,
+.pieChartContainer,
+.lineChartContainer,
+.piePaddingChartContainer {
+  text-align: center;
+  justify-content: center;
+}
+
+h3 {
+  justify-content: center;
+}
+}

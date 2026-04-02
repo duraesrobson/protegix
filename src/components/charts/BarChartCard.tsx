@@ -19,6 +19,7 @@ interface BarChartData {
 export default function BarChartCard({ perguntaId, titulo }: BarChartProps) {
   const [data, setData] = useState<BarChartData[]>([])
   const [loading, setLoading] = useState(true)
+  const total = data.reduce((acc, item) => acc + item.value, 0)
 
   useEffect(() => {
     // cria a query filtrando pela pergunta especifica
@@ -89,15 +90,31 @@ export default function BarChartCard({ perguntaId, titulo }: BarChartProps) {
           series={[
             {
               dataKey: "value",
-              label: "Total de Respostas",
+              label: "Total de respostas:",
               colorGetter: params => {
                 return chartPalette[params.dataIndex % chartPalette.length]
+              },
+              barLabel: (item, context) => {
+                if (!item.value || total === 0) return null
+
+                const percent = Math.round((Number(item.value) / total) * 100)
+
+                if (context.bar.height < 35) return null
+
+                return `${percent}%`
               }
             }
           ]}
           slotProps={{
             legend: {
-              sx: { display: "none" }
+              sx: {display: "none"}
+            }
+          }}
+          sx={{
+            [`& .MuiBarLabel-root`]: {
+              fill: "var(--color-text-inverse)",
+              fontWeight: 700,
+              fontSize: 12
             }
           }}
           height={260}

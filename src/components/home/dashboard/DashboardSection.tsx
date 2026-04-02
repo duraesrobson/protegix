@@ -3,8 +3,12 @@ import PieChartCard from "../../charts/PieChartCard"
 import PiePaddingChartCard from "../../charts/PiePaddingChartCard"
 import styles from "./DashboardSection.module.scss"
 import LineChartCard from "../../charts/LineChartCard"
+import { useTotalResponses } from "../../../hooks/useTotalResponses"
 
 export default function DashboardSection() {
+  const { totalRespostas, loading: loadingTotalRespostas } = useTotalResponses({
+    perguntaId: "seg_navegacao"
+  })
   return (
     <section id="dashboard" className={styles.dashboardSection}>
       <div className="container">
@@ -18,6 +22,11 @@ export default function DashboardSection() {
           >
             Acompanhe, de forma visual, os dados e padrões identificados a
             partir das respostas do formulário.
+          </p>
+          <p className={styles.totalRespostasText}>
+            {loadingTotalRespostas
+              ? "carregando..."
+              : `Total de respostas atuais usadas para o dashboard: ${totalRespostas}`}
           </p>
         </header>
 
@@ -37,7 +46,7 @@ export default function DashboardSection() {
           <div className={styles.spotlightGrid}>
             <article className={styles.chartWrapper}>
               <LineChartCard
-                titulo="Segurança percebida em navegação de sites, aplicativos de bancos, redes sociais, compras online e e-mail."
+                titulo="Nível de Confiança em Serviços Digitais"
                 ids={[
                   "seg_navegacao",
                   "seg_bancos",
@@ -70,18 +79,21 @@ export default function DashboardSection() {
           <div className={styles.chartsGrid}>
             <article className={styles.chartWrapper}>
               <PieChartCard
-                titulo="Uso de Senhas Diferentes"
+                titulo="Diversificação de Senhas entre Serviços"
                 perguntaId="senhas_diferentes"
               />
             </article>
             <article className={styles.chartWrapper}>
               <PieChartCard
-                titulo="Uso de Autenticação de 2 Fatores (2FA)"
+                titulo="Adoção de Autenticação em Duas Etapas"
                 perguntaId="2fa"
               />
             </article>
             <article className={styles.chartWrapper}>
-              <PieChartCard titulo="Já Caiu em Golpe?" perguntaId="golpe" />
+              <PieChartCard
+                titulo="Incidência de Vítimas de Golpes Online"
+                perguntaId="golpe"
+              />
             </article>
           </div>
         </section>
@@ -154,7 +166,10 @@ export default function DashboardSection() {
 
           <div className={styles.chartsGrid}>
             <article className={styles.chartWrapper}>
-              <BarChartCard titulo="Faixa Etária" perguntaId="faixa_etaria" />
+              <BarChartCard
+                titulo="Distribuição por Grupos de Idade"
+                perguntaId="faixa_etaria"
+              />
             </article>
             <article className={styles.chartWrapper}>
               <BarChartCard
@@ -165,11 +180,14 @@ export default function DashboardSection() {
           </div>
           <div className={styles.chartsGrid}>
             <article className={styles.chartWrapper}>
-              <PieChartCard titulo="Tempo de Uso" perguntaId="tempo_uso" />
+              <PieChartCard
+                titulo="Exposição Diária à Rede"
+                perguntaId="tempo_uso"
+              />
             </article>
             <article className={styles.chartWrapper}>
               <PieChartCard
-                titulo="Tipo de Conexão Mais Usada"
+                titulo="Tecnologias de Conexão Utilizadas"
                 perguntaId="tipo_conexao"
               />
             </article>

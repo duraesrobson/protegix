@@ -26,7 +26,13 @@
 
   .dashboardMainSubtitle {
     font-size: 22px;
+    font-weight: 300;
     margin-top: 0;
+  }
+
+  .totalRespostasText {
+    font-weight: 400;
+    color: var(--color-text-muted);
   }
 }
 
@@ -39,16 +45,17 @@
 .dashboardSectionTitle {
   font-weight: 700;
   font-size: 42px;
-  color: var(--color-primary);
+  color: var(--color-text);
   margin-bottom: 5px;
 }
 
 .dashboardSectionDescription {
   font-size: 22px;
   margin-top: 0px;
-  font-weight: 400;
+  font-weight: 300;
 
   span {
+    font-weight: 400;
     color: var(--color-primary);
   }
 }
@@ -82,5 +89,41 @@
     border-radius: 50px;
     text-align: center;
     padding: 20px 0;
+  }
+
+  .dashboardMainHeader {
+    .dashboardMainTitle {
+      line-height: 1.1;
+      font-size: 42px;
+    }
+
+    .dashboardMainSubtitle {
+      font-size: 16px;
+      padding: 0 20px;
+      margin-top: 10px;
+    }
+
+    .totalRespostasText {
+      padding: 0 18px;
+      font-size: 14px;
+    }
+  }
+
+  .dashboardSectionTitle {
+    line-height: 1;
+    font-size: 30px;
+    color: var(--color-text);
+  }
+
+  .dashboardSectionDescription {
+    font-size: 16px;
+    margin-top: 10px;
+    font-weight: 300;
+    margin-bottom: 0;
+
+    span {
+      font-weight: 400;
+      color: var(--color-primary);
+    }
   }
 }
