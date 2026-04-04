@@ -4,6 +4,8 @@ import PiePaddingChartCard from "../../charts/PiePaddingChartCard"
 import styles from "./DashboardSection.module.scss"
 import LineChartCard from "../../charts/LineChartCard"
 import { useTotalResponses } from "../../../hooks/useTotalResponses"
+import { Feedback } from "@mui/icons-material"
+import FeedbackListCard from "../../charts/FeedbackListCard"
 
 export default function DashboardSection() {
   const { totalRespostas, loading: loadingTotalRespostas } = useTotalResponses({
@@ -158,9 +160,9 @@ export default function DashboardSection() {
           <header className={styles.dashboardSectionHeader}>
             <h2 className={styles.dashboardSectionTitle}>Perfil do Usuário</h2>
             <p className={styles.dashboardSectionDescription}>
-              Quem são nossos participantes: Um olhar sobre as características
-              de quem respondeu à pesquisa, ajudando a entender diferentes
-              perfis de navegação.
+              <span>Quem são nossos participantes:</span> Um olhar sobre as
+              características de quem respondeu à pesquisa, ajudando a entender
+              diferentes perfis de navegação.
             </p>
           </header>
 
@@ -189,6 +191,131 @@ export default function DashboardSection() {
               <PieChartCard
                 titulo="Tecnologias de Conexão Utilizadas"
                 perguntaId="tipo_conexao"
+              />
+            </article>
+          </div>
+        </section>
+
+        {/* separador */}
+        <hr className={styles.sectionDivider} />
+
+        {/* seção 5 - uso de ia */}
+        <section className={styles.dashboardContentSection}>
+          <header className={styles.dashboardSectionHeader}>
+            <h2 className={styles.dashboardSectionTitle}>
+              Uso de IA Generativa
+            </h2>
+            <p className={styles.dashboardSectionDescription}>
+              <span>Inovação e confiança:</span> Explore como a inteligência 
+              artificial está sendo integrada à rotina, a frequência de uso e o 
+              grau de verificação das informações geradas por essas ferramentas.
+            </p>
+          </header>
+
+          <div className={styles.chartsGrid}>
+            <article className={styles.chartWrapper}>
+              <BarChartCard
+                titulo="Utiliza ferramentas de IA generativa"
+                perguntaId="utiliza_ia"
+              />
+            </article>
+            <article className={styles.chartWrapper}>
+              <BarChartCard
+                titulo="Frequência de uso de ferramentas de IA"
+                perguntaId="frequencia_ia"
+              />
+            </article>
+          </div>
+          <div className={styles.chartsGrid}>
+            <article className={styles.chartWrapper}>
+              <PieChartCard
+                titulo="Finalidades do uso de IA"
+                perguntaId="finalidade_ia"
+              />
+            </article>
+            <article className={styles.chartWrapper}>
+              <PieChartCard
+                titulo="Confiança nas respostas de IA"
+                perguntaId="confianca_ia"
+              />
+            </article>
+            <article className={styles.chartWrapper}>
+              <PieChartCard
+                titulo="Verificação de respostas fornecidas pela IA"
+                perguntaId="verificacao_ia"
+              />
+            </article>
+          </div>
+        </section>
+
+        {/* separador */}
+        <hr className={styles.sectionDivider} />
+
+        {/* seção 6 - Proteção de Dados (LGPD) */}
+        <section className={styles.dashboardContentSection}>
+          <header className={styles.dashboardSectionHeader}>
+            <h2 className={styles.dashboardSectionTitle}>
+              Proteção de Dados (LGPD)
+            </h2>
+            <p className={styles.dashboardSectionDescription}>
+              <span>Privacidade e Direitos:</span>{" "}
+              Entenda como os participantes percebem a proteção de seus dados
+              pessoais, o nível de informação sobre a LGPD, práticas de
+              consentimento e compartilhamento, além da confiança nas
+              organizações que tratam essas informações.
+            </p>
+          </header>
+
+          <div className={styles.chartsGrid}>
+            <article className={styles.chartWrapper}>
+              <PieChartCard
+                titulo="Já ouviu falar da LGPD (Lei Geral de Proteção de Dados)"
+                perguntaId="lgpd"
+              />
+            </article>
+            <article className={styles.chartWrapper}>
+              <PieChartCard
+                titulo="Nivel de conhecimento sobre proteção de dados"
+                perguntaId="lgpd_nivel"
+              />
+            </article>
+            <article className={styles.chartWrapper}>
+              <PieChartCard
+                titulo="Costume de ler termos de uso e políticas de privacidade"
+                perguntaId="lgpd_termos"
+              />
+            </article>
+          </div>
+          <div className={styles.chartsGrid}>
+            <article className={styles.chartWrapper}>
+              <BarChartCard
+                titulo="Já deixou de usar algum serviço por preocupação com privacidade"
+                perguntaId="lgpd_uso"
+              />
+            </article>
+          </div>
+        </section>
+
+        {/* separador */}
+        <hr className={styles.sectionDivider} />
+
+        {/* seção 7 - lista de feedback */}
+        <section className={styles.dashboardContentSection}>
+          <header className={styles.dashboardSectionHeader}>
+            <h2 className={styles.dashboardSectionTitle}>
+              Voz do Participante
+            </h2>
+            <p className={styles.dashboardSectionDescription}>
+              <span>Opiniões e sugestões:</span> Confira o que pensam e as
+              preocupações deixadas por quem participou da pesquisa.
+            </p>
+          </header>
+
+          <div className={styles.chartsGrid}>
+            <article className={styles.chartWrapper}>
+              <FeedbackListCard
+                titulo="Maiores Riscos Percebidos na Tecnologia"
+                perguntaId="feedbacks"
               />
             </article>
           </div>
