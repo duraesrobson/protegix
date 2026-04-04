@@ -4,7 +4,6 @@ import PiePaddingChartCard from "../../charts/PiePaddingChartCard"
 import styles from "./DashboardSection.module.scss"
 import LineChartCard from "../../charts/LineChartCard"
 import { useTotalResponses } from "../../../hooks/useTotalResponses"
-import { Feedback } from "@mui/icons-material"
 import FeedbackListCard from "../../charts/FeedbackListCard"
 
 export default function DashboardSection() {
