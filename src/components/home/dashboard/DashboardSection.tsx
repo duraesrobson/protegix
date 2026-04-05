@@ -132,7 +132,7 @@ export default function DashboardSection() {
           <div className={styles.chartsGrid}>
             <article className={styles.chartWrapper}>
               <PiePaddingChartCard
-                titulo="Verificação a segurança de sites antes de inserir dados pessoais"
+                titulo="Verificação da Segurança de Sites"
                 perguntaId="verifica_sites"
               />
             </article>
@@ -144,7 +144,7 @@ export default function DashboardSection() {
             </article>
             <article className={styles.chartWrapper}>
               <PiePaddingChartCard
-                titulo="Deixou de realizar alguma atividade por falta de acesso à tecnologia"
+                titulo="Impacto da Falta de Acesso à Tecnologia"
                 perguntaId="falta_de_acesso"
               />
             </article>
@@ -214,13 +214,13 @@ export default function DashboardSection() {
           <div className={styles.chartsGrid}>
             <article className={styles.chartWrapper}>
               <BarChartCard
-                titulo="Utiliza ferramentas de IA generativa"
+                titulo="Uso de Ferramentas de IA Generativa"
                 perguntaId="utiliza_ia"
               />
             </article>
             <article className={styles.chartWrapper}>
               <BarChartCard
-                titulo="Frequência de uso de ferramentas de IA"
+                titulo="Frequência de Uso de Ferramentas de IA"
                 perguntaId="frequencia_ia"
               />
             </article>
@@ -228,19 +228,19 @@ export default function DashboardSection() {
           <div className={styles.chartsGrid}>
             <article className={styles.chartWrapper}>
               <PieChartCard
-                titulo="Finalidades do uso de IA"
+                titulo="Finalidades de Uso da IA"
                 perguntaId="finalidade_ia"
               />
             </article>
             <article className={styles.chartWrapper}>
               <PieChartCard
-                titulo="Confiança nas respostas de IA"
+                titulo="Confiança Nas Respostas de IA"
                 perguntaId="confianca_ia"
               />
             </article>
             <article className={styles.chartWrapper}>
               <PieChartCard
-                titulo="Verificação de respostas fornecidas pela IA"
+                titulo="Verificação de Respostas da IA"
                 perguntaId="verificacao_ia"
               />
             </article>
@@ -267,20 +267,20 @@ export default function DashboardSection() {
 
           <div className={styles.chartsGrid}>
             <article className={styles.chartWrapper}>
-              <PieChartCard
-                titulo="Já ouviu falar da LGPD (Lei Geral de Proteção de Dados)"
+              <PiePaddingChartCard
+                titulo="Conhecimento Sobre a LGPD (Lei Geral de Proteção de Dados)"
                 perguntaId="lgpd"
               />
             </article>
             <article className={styles.chartWrapper}>
-              <PieChartCard
-                titulo="Nivel de conhecimento sobre proteção de dados"
+              <PiePaddingChartCard
+                titulo="Nível de Conhecimento sobre Proteção de Dados"
                 perguntaId="lgpd_nivel"
               />
             </article>
             <article className={styles.chartWrapper}>
-              <PieChartCard
-                titulo="Costume de ler termos de uso e políticas de privacidade"
+              <PiePaddingChartCard
+                titulo="Leitura de Termos de Uso e Políticas de Privacidade"
                 perguntaId="lgpd_termos"
               />
             </article>
@@ -288,7 +288,7 @@ export default function DashboardSection() {
           <div className={styles.chartsGrid}>
             <article className={styles.chartWrapper}>
               <BarChartCard
-                titulo="Já deixou de usar algum serviço por preocupação com privacidade"
+                titulo="Impacto da Privacidade no Uso de Serviços"
                 perguntaId="lgpd_uso"
               />
             </article>

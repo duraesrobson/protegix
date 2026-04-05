@@ -67,14 +67,25 @@ export default function PiePaddingChartCard({
 
       // mapeia os dados injetando a cor da sua paleta
       const formatted: PiePaddingChartData[] = sortedLabels.map(
-        (key, index) => ({
-          id: index,
-          label: key,
-          value: counts[key],
-          color: chartPalette[index % chartPalette.length] // Aplica a cor do theme.css
-        })
-      )
+        (key, index) => {
+          let label = key
 
+          if (perguntaId === "falta_de_acesso") {
+            label = key === "Sim" ? "Foi impactado" : "Não foi impactado"
+          }
+
+          if (perguntaId === "lgpd") {
+            label = key === "Sim" ? "Conhece" : "Não conhece"
+          }
+
+          return {
+            id: index,
+            label,
+            value: counts[key],
+            color: chartPalette[index % chartPalette.length]
+          }
+        }
+      )
       setData(formatted)
       setLoading(false)
     })

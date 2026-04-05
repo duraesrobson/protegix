@@ -42,10 +42,19 @@ export default function BarChartCard({ perguntaId, titulo }: BarChartProps) {
         })
 
         // transforma o objeto de contagem em array para o mui charts
-        const formatted = Object.keys(counts).map(key => ({
-          label: key,
-          value: counts[key]
-        }))
+        const formatted = Object.keys(counts).map(key => {
+          let label = key
+
+          if (perguntaId === "utiliza_ia") {
+            label = key === "Sim" ? "Utiliza" : "Não utiliza"
+          }
+
+          if (perguntaId === "lgpd_uso") {
+            label = key === "Sim" ? "Já evitou serviços" : "Não evitou serviços"
+          }
+
+          return { label, value: counts[key] }
+        })
 
         // ordena alfabeticamente pelo label (a, b, c...)
         const sortedData = formatted.sort((a, b) =>
@@ -107,7 +116,7 @@ export default function BarChartCard({ perguntaId, titulo }: BarChartProps) {
           ]}
           slotProps={{
             legend: {
-              sx: {display: "none"}
+              sx: { display: "none" }
             }
           }}
           sx={{
