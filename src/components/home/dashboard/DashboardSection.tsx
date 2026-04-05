@@ -24,10 +24,14 @@ export default function DashboardSection() {
             Acompanhe, de forma visual, os dados e padrões identificados a
             partir das respostas do formulário.
           </p>
+          <p className={styles.dashboardMainSubtitle}>
+  Este projeto contribui com os <b>Objetivos de Desenvolvimento Sustentável (ODS)</b>,
+  especialmente a <b>ODS 16</b>, promovendo segurança digital e acesso consciente à informação.
+</p>
           <p className={styles.totalRespostasText}>
             {loadingTotalRespostas
               ? "carregando..."
-              : `Total de respostas atuais usadas para o dashboard: ${totalRespostas}`}
+              : `Total de respostas analisadas no dashboard: ${totalRespostas}`}
           </p>
         </header>
 

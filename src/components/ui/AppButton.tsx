@@ -7,6 +7,7 @@ type AppButtonProps = {
   text: string
   to: string
   variant?: ButtonVariant
+  newTab?: boolean
 }
 
 const buttonStyles = {
@@ -29,20 +30,29 @@ const buttonStyles = {
 export default function AppButton({
   text,
   to,
-  variant = "primary"
+  variant = "primary",
+  newTab = false
 }: AppButtonProps) {
   const currentStyle = buttonStyles[variant]
   const isAnchor = to.startsWith("#")
+  const shouldUseAnchor = isAnchor || newTab
 
   return (
     <Button
-      component={isAnchor ? "a" : NavLink}
-      {...(isAnchor ? { href: to } : { to })}
+      component={shouldUseAnchor ? "a" : NavLink}
+      {...(shouldUseAnchor ? { href: to } : { to })}
+      {...(newTab
+        ? {
+            target: "_blank",
+            rel: "noopener noreferrer"
+          }
+        : {})}
       sx={{
         color: currentStyle.color,
         background: currentStyle.bg,
         border: currentStyle.border,
         textTransform: "none",
+        textAlign: "center",
         fontWeight: 600,
         fontSize: {
           xs: "1rem",

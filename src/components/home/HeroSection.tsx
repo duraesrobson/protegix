@@ -12,12 +12,17 @@ export default function HeroSection() {
             Proteja sua vida digital com informação.
           </h1>
           <p className={styles.heroDescription}>
-            Aprenda sobre segurança digital, conheça seus direitos e tome
-            decisões mais seguras no ambiente online.
+            Aprenda sobre segurança digital, conheça seus direitos, acompanhe
+            dados da pesquisa e tome decisões mais seguras no ambiente online.
           </p>
           <div className={styles.heroButtons}>
-            <AppButton text="Ver dashboard" to="#dashboard" />
-            <AppButton text="Fazer quiz" to="/quiz" variant="secondary" />
+            <AppButton text="Explorar dashboard" to="#dashboard" />
+            <AppButton
+              text="Participar da pesquisa"
+              to="https://forms.gle/frGUgTB2hHztENWFA"
+              variant="secondary"
+              newTab
+            />
           </div>
         </div>
       </div>
