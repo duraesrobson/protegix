@@ -55,7 +55,7 @@ export default function DashboardSection() {
                   "seg_compras",
                   "seg_email"
                 ]}
-                labels={["Navegação", "Bancos", "Redes", "Compras", "Email"]}
+                labels={["Navegação", "Bancos", "Redes Sociais", "Compras", "Email"]}
               />
             </article>
           </div>

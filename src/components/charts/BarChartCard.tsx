@@ -114,7 +114,7 @@ export default function BarChartCard({ perguntaId, titulo }: BarChartProps) {
             [`& .MuiBarLabel-root`]: {
               fill: "var(--color-text-inverse)",
               fontWeight: 700,
-              fontSize: 12
+              fontSize: 14
             }
           }}
           height={260}

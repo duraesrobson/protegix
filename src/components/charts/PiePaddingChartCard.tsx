@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { db } from "../../lib/firebase"
 import { collection, onSnapshot, query, where } from "firebase/firestore"
-import { PieChart, pieClasses } from "@mui/x-charts/PieChart"
+import { PieChart } from "@mui/x-charts/PieChart"
 import type { PieValueType } from "@mui/x-charts/models"
 import { chartPalette } from "./ChartCollorPallets"
 import styles from "./ChartStyles.module.scss"
@@ -35,6 +35,13 @@ export default function PiePaddingChartCard({
   const valueFormatter = (item: { value: number }) => {
     const percent = ((item.value / totalRespostas) * 100).toFixed(1)
     return `${item.value} respostas (${percent}%)`
+  }
+
+  const arcLabel = (item: { value: number }) => {
+    const percent = totalRespostas
+      ? Math.round((item.value / totalRespostas) * 100)
+      : "0"
+    return `${percent}%`
   }
 
   useEffect(() => {
@@ -96,11 +103,12 @@ export default function PiePaddingChartCard({
             {
               data,
               paddingAngle: 5,
-              innerRadius: "60%",
+              innerRadius: "45%",
               outerRadius: "80%",
               cornerRadius: 5,
               highlightScope: { fade: "global", highlight: "item" },
               valueFormatter,
+              arcLabel,
               faded: {
                 innerRadius: 75,
                 additionalRadius: -20,
@@ -111,8 +119,8 @@ export default function PiePaddingChartCard({
             }
           ]}
           sx={{
-            [`& .${pieClasses.root}`]: {
-              fill: "white",
+            "& .MuiPieArcLabel-root": {
+              fill: "var(--color-text-inverse)",
               fontWeight: "bold",
               fontSize: 14
             }
