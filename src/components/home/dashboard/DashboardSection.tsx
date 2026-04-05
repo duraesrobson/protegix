@@ -14,20 +14,20 @@ export default function DashboardSection() {
     <section id="dashboard" className={styles.dashboardSection}>
       <div className="container">
         {/* cabeçalho principal do dashboard */}
-        <header className={`dashboardMainHeader ${styles.dashboardMainHeader}`}>
-          <h1 className={`dashboardMainTitle ${styles.dashboardMainTitle}`}>
+        <header className={`section-header ${styles.dashboardMainHeader}`}>
+          <h1 className={`section-title ${styles.dashboardMainTitle}`}>
             Dashboard Protegix
           </h1>
-          <p
-            className={`dashboardMainSubtitle ${styles.dashboardMainSubtitle}`}
-          >
+          <p className={`section-subtitle ${styles.dashboardMainSubtitle}`}>
             Acompanhe, de forma visual, os dados e padrões identificados a
             partir das respostas do formulário.
           </p>
           <p className={styles.dashboardMainSubtitle}>
-  Este projeto contribui com os <b>Objetivos de Desenvolvimento Sustentável (ODS)</b>,
-  especialmente a <b>ODS 16</b>, promovendo segurança digital e acesso consciente à informação.
-</p>
+            Este projeto contribui com os{" "}
+            <b>Objetivos de Desenvolvimento Sustentável (ODS)</b>, especialmente
+            a <b>ODS 16</b>, promovendo segurança digital e acesso consciente à
+            informação.
+          </p>
           <p className={styles.totalRespostasText}>
             {loadingTotalRespostas
               ? "carregando..."
@@ -59,7 +59,13 @@ export default function DashboardSection() {
                   "seg_compras",
                   "seg_email"
                 ]}
-                labels={["Navegação", "Bancos", "Redes Sociais", "Compras", "Email"]}
+                labels={[
+                  "Navegação",
+                  "Bancos",
+                  "Redes Sociais",
+                  "Compras",
+                  "Email"
+                ]}
               />
             </article>
           </div>
@@ -209,8 +215,8 @@ export default function DashboardSection() {
               Uso de IA Generativa
             </h2>
             <p className={styles.dashboardSectionDescription}>
-              <span>Inovação e confiança:</span> Explore como a inteligência 
-              artificial está sendo integrada à rotina, a frequência de uso e o 
+              <span>Inovação e confiança:</span> Explore como a inteligência
+              artificial está sendo integrada à rotina, a frequência de uso e o
               grau de verificação das informações geradas por essas ferramentas.
             </p>
           </header>
@@ -261,11 +267,10 @@ export default function DashboardSection() {
               Proteção de Dados (LGPD)
             </h2>
             <p className={styles.dashboardSectionDescription}>
-              <span>Privacidade e Direitos:</span>{" "}
-              Entenda como os participantes percebem a proteção de seus dados
-              pessoais, o nível de informação sobre a LGPD, práticas de
-              consentimento e compartilhamento, além da confiança nas
-              organizações que tratam essas informações.
+              <span>Privacidade e Direitos:</span> Entenda como os participantes
+              percebem a proteção de seus dados pessoais, o nível de informação
+              sobre a LGPD, práticas de consentimento e compartilhamento, além
+              da confiança nas organizações que tratam essas informações.
             </p>
           </header>
 
