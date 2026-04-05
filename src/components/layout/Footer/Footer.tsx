@@ -17,7 +17,7 @@ export default function Footer() {
         </div>
 
         <p className="footer-credits">
-          Projeto desenvolvido por Matheus, Mikaella Teixeira e Robson Durães.
+          Projeto desenvolvido por Matheus, Mikaella Teixeira, Robson Durães e Salatiel Martins.
         </p>
 
         <p className="footer-copyright">
