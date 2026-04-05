@@ -4,6 +4,7 @@ import { collection, onSnapshot, query, where } from "firebase/firestore"
 import { PieChart } from "@mui/x-charts/PieChart"
 import type { PieValueType } from "@mui/x-charts/models"
 import { chartPalette } from "./ChartCollorPallets"
+import { generateChartInsight } from "../../utils/generateChartInsight"
 import styles from "./ChartStyles.module.scss"
 
 interface PiePaddingChartProps {
@@ -104,6 +105,14 @@ export default function PiePaddingChartCard({
         }
       : {}
 
+  // gera um insight automático baseado nos dados do gráfico
+  const insight = generateChartInsight({
+    perguntaId,
+    titulo,
+    data,
+    total: totalRespostas
+  })
+
   return (
     <div className={styles.piePaddingChartContainer}>
       <h3>{titulo}</h3>
@@ -154,6 +163,9 @@ export default function PiePaddingChartCard({
       ) : (
         <p>sem dados para exibir.</p>
       )}
+      <div className={styles.chartInsightContainer}>
+        <p className={styles.chartInsightText}>{insight}</p>
+      </div>
     </div>
   )
 }

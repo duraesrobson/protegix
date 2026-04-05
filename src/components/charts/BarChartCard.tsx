@@ -3,6 +3,7 @@ import { db } from "../../lib/firebase"
 import { collection, onSnapshot, query, where } from "firebase/firestore"
 import { BarChart } from "@mui/x-charts/BarChart"
 import { chartPalette } from "./ChartCollorPallets"
+import { generateChartInsight } from "../../utils/generateChartInsight"
 import styles from "./ChartStyles.module.scss"
 
 interface BarChartProps {
@@ -78,6 +79,14 @@ export default function BarChartCard({ perguntaId, titulo }: BarChartProps) {
     return <p style={{ textAlign: "center" }}>carregando gráfico...</p>
   }
 
+  // gera um insight automático baseado nos dados do gráfico
+  const insight = generateChartInsight({
+    perguntaId,
+    titulo,
+    data,
+    total
+  })
+
   return (
     <div className={styles.barChartContainer}>
       <h3>{titulo}</h3>
@@ -132,6 +141,9 @@ export default function BarChartCard({ perguntaId, titulo }: BarChartProps) {
       ) : (
         <p>nenhuma resposta encontrada para esta pergunta.</p>
       )}
+      <div className={styles.chartInsightContainer}>
+        <p className={styles.chartInsightText}>{insight}</p>
+      </div>
     </div>
   )
 }

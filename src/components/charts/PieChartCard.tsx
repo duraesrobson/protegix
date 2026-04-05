@@ -7,6 +7,7 @@ import { PieChart, pieClasses } from "@mui/x-charts/PieChart"
 import type { DefaultizedPieValueType } from "@mui/x-charts/models"
 import { chartPalette } from "./ChartCollorPallets"
 import styles from "./ChartStyles.module.scss"
+import { generateChartInsight } from "../../utils/generateChartInsight"
 
 interface PieProps {
   perguntaId: string
@@ -81,6 +82,14 @@ export default function PieChartCard({ perguntaId, titulo }: PieProps) {
       </p>
     )
 
+  // gera um insight automático baseado nos dados do gráfico
+  const insight = generateChartInsight({
+    perguntaId,
+    titulo,
+    data,
+    total
+  })
+
   return (
     <div className={styles.pieChartContainer}>
       <h3>{titulo}</h3>
@@ -132,6 +141,9 @@ export default function PieChartCard({ perguntaId, titulo }: PieProps) {
           sem dados para exibir.
         </p>
       )}
+      <div className={styles.chartInsightContainer}>
+        <p className={styles.chartInsightText}>{insight}</p>
+      </div>
     </div>
   )
 }

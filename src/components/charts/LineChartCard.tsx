@@ -13,6 +13,11 @@ interface LineChartProps {
   titulo: string
 }
 
+interface ChartPoint {
+  label: string
+  value: number
+}
+
 export default function LineChartCard({ ids, labels, titulo }: LineChartProps) {
   const [pData, setPData] = useState<number[]>([])
   const [loading, setLoading] = useState(true)
@@ -29,7 +34,9 @@ export default function LineChartCard({ ids, labels, titulo }: LineChartProps) {
 
       snapshot.forEach(doc => {
         const { perguntaId, opcao } = doc.data()
-        const valorNumerico = parseInt(opcao.replace("%", "")) || 0
+
+        const valorNumerico =
+          typeof opcao === "string" ? parseInt(opcao.replace("%", "")) || 0 : 0
 
         somaPorId[perguntaId] = (somaPorId[perguntaId] || 0) + valorNumerico
         contagemPorId[perguntaId] = (contagemPorId[perguntaId] || 0) + 1
@@ -53,7 +60,12 @@ export default function LineChartCard({ ids, labels, titulo }: LineChartProps) {
 
     return (
       <g>
-        <circle cx={x} cy={y} r={isMobile ? 5 : 6} fill={color || "var(--color-primary)"} />
+        <circle
+          cx={x}
+          cy={y}
+          r={isMobile ? 5 : 6}
+          fill={color || "var(--color-primary)"}
+        />
         <text
           x={x}
           y={Number(y) - (isMobile ? 10 : 15)}
@@ -71,6 +83,25 @@ export default function LineChartCard({ ids, labels, titulo }: LineChartProps) {
   }
 
   if (loading) return <p>carregando média de segurança...</p>
+
+  const chartData: ChartPoint[] = pData.map((value, index) => ({
+    label: labels[index],
+    value
+  }))
+
+  const menorPonto = chartData.reduce((menor, atual) =>
+    atual.value < menor.value ? atual : menor
+  )
+
+  const insight = (
+    <>
+      <span className={styles.highlightLabel}>{menorPonto.label}</span> foi o
+      serviço com menor percepção de segurança, com{" "}
+      <span className={styles.highlightPercent}>{menorPonto.value}%</span>. Isso
+      indica que esse é o ambiente em que os participantes demonstram menos
+      confiança no uso.
+    </>
+  )
 
   return (
     <div className={styles.lineChartContainer}>
@@ -116,6 +147,22 @@ export default function LineChartCard({ ids, labels, titulo }: LineChartProps) {
         slots={{ mark: CustomMark }}
         height={isMobile ? 200 : 350}
       />
+
+      <div className={styles.chartInsightContainer}>
+        <p className={styles.chartInsightText}>{insight}</p>
+      </div>
+    </div>
+  )
+}
+
+export function LineChartCardSkeleton({ titulo }: { titulo: string }) {
+  return (
+    <div className={styles.lineChartContainer}>
+      <h3>{titulo}</h3>
+      <p>carregando média de segurança...</p>
+      <div className={styles.chartInsightContainer}>
+        <p className={styles.chartInsightText}>gerando insight...</p>
+      </div>
     </div>
   )
 }
