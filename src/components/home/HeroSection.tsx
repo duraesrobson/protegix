@@ -23,7 +23,6 @@ export default function HeroSection() {
               variant="secondary"
               newTab
             />
-            <AppButton text="Responder Quiz" to="/quiz" />
           </div>
         </div>
       </div>
