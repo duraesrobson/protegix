@@ -96,10 +96,12 @@ export default function HeaderMobile() {
             const Icon = link.icon
 
             return (
-              <NavItem key={link.to} to={link.to} end>
-                <Icon sx={{ fontSize: 20 }} />
-                {link.label}
-              </NavItem>
+              <div key={link.to} onClick={() => setOpenDrawer(false)}>
+                <NavItem to={link.to} end>
+                  <Icon sx={{ fontSize: 20 }} />
+                  {link.label}
+                </NavItem>
+              </div>
             )
           })}
         </Drawer>
