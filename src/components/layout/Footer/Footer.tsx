@@ -10,7 +10,7 @@ export default function Footer() {
       position="static"
       elevation={0}
       sx={{
-        background: "var(--color-surface)",
+        background: "var(--color-bg)",
         borderTop: "1px solid var(--color-border)"
       }}
     >
