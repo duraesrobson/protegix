@@ -9,7 +9,10 @@ export default function Footer() {
       component="footer"
       position="static"
       elevation={0}
-      sx={{ background: "none", borderTop: "1px solid var(--color-border)" }}
+      sx={{
+        background: "var(--color-surface)",
+        borderTop: "1px solid var(--color-border)"
+      }}
     >
       <div className="footer-inner">
         <div className="footer-logo">
@@ -17,7 +20,8 @@ export default function Footer() {
         </div>
 
         <p className="footer-credits">
-          Projeto desenvolvido por Matheus, Mikaella Teixeira, Robson Durães e Salatiel Martins.
+          Projeto desenvolvido por Matheus, Mikaella Teixeira, Robson Durães e
+          Salatiel Martins.
         </p>
 
         <p className="footer-copyright">

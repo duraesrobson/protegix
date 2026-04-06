@@ -17,7 +17,7 @@ export default function HeaderMobile() {
       position="sticky"
       elevation={0}
       sx={{
-        background: "var(--color-bg)",
+        background: "var(--color-surface)",
         color: "var(--color-text)",
         borderBottom: "1px solid var(--color-border)"
       }}
