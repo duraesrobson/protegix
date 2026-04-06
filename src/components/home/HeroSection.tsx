@@ -16,7 +16,7 @@ export default function HeroSection() {
             dados da pesquisa e tome decisões mais seguras no ambiente online.
           </p>
           <div className={styles.heroButtons}>
-            <AppButton text="Explorar dashboard" to="#dashboard" />
+            <AppButton text="Explorar dashboard" to="/dashboard" />
             <AppButton
               text="Participar da pesquisa"
               to="https://forms.gle/frGUgTB2hHztENWFA"
