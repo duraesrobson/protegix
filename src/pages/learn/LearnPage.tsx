@@ -14,7 +14,7 @@ export default function LearnPage() {
         <div className={styles.hero}>
           <div className={styles.heroText}>
             <h1 className="section-title">Segurança digital para todos</h1>
-            <p className={styles.heroDescription}>
+            <p className="section-subtitle">
               Aprenda como proteger suas contas, dados e dispositivos com dicas
               simples e práticas. A segurança digital começa com hábitos do dia
               a dia e atitudes inteligentes na internet.

@@ -3,6 +3,7 @@
   border: 1px solid var(--color-border);
   border-radius: 10px;
   padding: 10px;
+  margin-top: 40px;
 }
 
 .quizMeta {
@@ -58,4 +59,28 @@
 
 .quizOption.incorrect {
   border-color: var(--color-danger);
+}
+
+@media screen and (max-width: 900px) {
+  .quizMeta {
+    font-size: 14px;
+  }
+
+  .questionTitle {
+    font-size: 18px;
+  }
+
+  .quizOption {
+    padding: 12px 14px;
+    font-size: 15px;
+  }
+
+  .quizOption.correct,
+  .quizOption.incorrect {
+    font-size: 15px;
+  }
+
+  .sectionSubtitle {
+    font-size: 15px;
+  }
 }
