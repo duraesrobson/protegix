@@ -15,7 +15,7 @@ export default function HeaderDesktop() {
       position="sticky"
       elevation={0}
       sx={{
-        background: "var(--color-surface)",
+        background: "var(--color-bg)",
         borderBottom: "1px solid var(--color-border)"
       }}
     >
