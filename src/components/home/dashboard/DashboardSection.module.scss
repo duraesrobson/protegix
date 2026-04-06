@@ -2,9 +2,6 @@
   position: relative;
   padding: 20px 0 60px;
   z-index: 10;
-  scroll-margin-top: 100px;
-  border-top: 2px solid var(--color-border);
-  border-radius: 50px;
   margin-bottom: 40px;
 }
 
@@ -85,8 +82,6 @@
 
 @media screen and (max-width: 900px) {
   .dashboardSection {
-    border-top: 2px solid var(--color-border);
-    border-radius: 50px;
     text-align: center;
     padding: 20px 0;
   }
