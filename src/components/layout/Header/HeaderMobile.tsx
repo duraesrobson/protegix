@@ -6,6 +6,7 @@ import NavItem from "../../ui/NavItem"
 import logoMobile from "../../../assets/protegix-icon.svg"
 import { headerNavLinks } from "./HeaderNavLinks"
 import "./header.css"
+import { Link } from "react-router-dom"
 
 export default function HeaderMobile() {
   const [openDrawer, setOpenDrawer] = useState(false)
@@ -104,16 +105,18 @@ export default function HeaderMobile() {
         </Drawer>
 
         <div className="header-logo">
-          <Box
-            component="img"
-            src={logoMobile}
-            alt="Logo PROTEGIX"
-            sx={{
-              height: 35,
-              objectFit: "contain",
-              marginLeft: "auto"
-            }}
-          />
+          <Link to="/">
+            <Box
+              component="img"
+              src={logoMobile}
+              alt="Logo PROTEGIX"
+              sx={{
+                height: 35,
+                objectFit: "contain",
+                marginLeft: "auto"
+              }}
+            />
+          </Link>
         </div>
       </Toolbar>
     </AppBar>

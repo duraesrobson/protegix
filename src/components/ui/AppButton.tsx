@@ -21,7 +21,7 @@ const buttonStyles = {
   secondary: {
     color: "var(--color-text-inverse)",
     bg: "#ffffff",
-    border: "1.5px solid transparent",
+    border: "1.5px solid var(--color-border)",
     hoverColor: "var(--color-text-inverse)",
     hoverBorder: "var(--color-primary)"
   }
@@ -61,19 +61,16 @@ export default function AppButton({
         lineHeight: 1,
         minWidth: 0,
         width: {
-          xs: "100%",
+          xs: "90%",
           sm: "auto"
         },
-        borderRadius: {
-          xs: "12px",
-          sm: "16px"
-        },
+        borderRadius: "16px",
         px: {
           xs: 3,
           sm: 4
         },
         py: {
-          xs: 1.5,
+          xs: 2.2,
           sm: 2
         },
         transition: "all 0.2s ease",

@@ -1,0 +1,296 @@
+.pageSection {
+  padding: 40px 0;
+}
+
+.hero {
+  gap: 24px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.heroText {
+  justify-content: center;
+  text-align: center;
+}
+
+.heroTitle {
+  font-size: clamp(2.5rem, 4vw, 4.5rem);
+  line-height: 1.05;
+}
+
+.heroDescription {
+  margin: 1.5rem auto;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  max-width: 680px;
+  font-weight: 400;
+  color: var(--color-text);
+}
+
+.heroActions {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.highlight {
+  color: var(--color-primary);
+}
+
+.sectionRow {
+  display: grid;
+  gap: 24px;
+  margin-top: 56px;
+}
+
+.sectionHeader {
+  display: grid;
+
+  h2 {
+    margin: 0;
+  }
+}
+
+.threatSection,
+.actionSection {
+  margin-top: 56px;
+  padding: 32px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.threatHeader {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+}
+
+.threatGrid,
+.actionGrid {
+  display: grid;
+  overflow: scroll;
+  gap: 20px;
+  grid-template-columns: repeat(6, minmax(350px, 1fr));
+  margin-top: 24px;
+}
+
+.actionHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.threatCard,
+.actionCard {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+
+  h3 {
+    margin: 0;
+  }
+}
+
+.threatIcon,
+.actionIcon {
+  min-width: 56px;
+  min-height: 56px;
+  display: grid;
+  place-items: center;
+  border-radius: 18px;
+  background: rgba(34, 105, 246, 0.12);
+  color: var(--color-primary);
+}
+
+.securityCards {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
+}
+
+.securityCard {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  color: var(--color-text);
+
+  p {
+    color: var(--color-text-muted);
+  }
+}
+
+.securityCardHeader {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.securityCardTitle {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.securityCardIcon {
+  min-width: 56px;
+  min-height: 56px;
+  display: grid;
+  place-items: center;
+  border-radius: 18px;
+  background: rgba(34, 105, 246, 0.12);
+  color: var(--color-primary);
+}
+
+.tipSection {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 40px;
+}
+
+.tipGrid {
+  display: grid;
+  gap: 18px;
+  margin-top: 22px;
+}
+
+.tipCard {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  padding: 22px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.tipHeader {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.tipIcon {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: rgba(34, 105, 246, 0.12);
+  color: var(--color-primary);
+}
+
+.resourceCard {
+  border-radius: 28px;
+  padding: 28px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.resourceCard h2 {
+  margin: 0 auto 12px;
+}
+
+.resourceList {
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.resourceItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 18px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  strong {
+    color: var(--color-esmerald);
+  }
+
+  span {
+    color: var(--color-text-muted);
+  }
+}
+
+@media (max-width: 940px) {
+  .securityCards {
+    grid-template-columns: 1fr;
+  }
+  .hero {
+    padding: 0 0;
+
+    .heroText {
+      line-height: 1.05;
+    }
+  }
+
+  .sectionRow {
+    margin-top: 36px;
+  }
+
+  .threatCard {
+    text-align: left;
+  }
+
+  .actionGrid, .threatGrid {
+    grid-template-columns: repeat(6, minmax(290px, 1fr));
+  }
+
+  .actionHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+
+    .actionIcon {
+      border-radius: 12px;
+      min-width: 50px;
+      min-height: 50px;
+      svg {
+        height: 30px;
+        width: 30px;
+      }
+    }
+
+    h3 {
+      margin: 0;
+    }
+  }
+
+  .actionCard {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .tipGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .tipCard {
+    text-align: left;
+  }
+
+  .resourceItem {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

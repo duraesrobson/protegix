@@ -4,6 +4,7 @@ import Box from "@mui/material/Box"
 import NavItem from "../../ui/NavItem"
 import logo from "../../../assets/protegix-icon.svg"
 import { headerNavLinks } from "./HeaderNavLinks"
+import { Link } from "react-router-dom"
 import "./header.css"
 
 export default function HeaderDesktop() {
@@ -13,7 +14,10 @@ export default function HeaderDesktop() {
       component="header"
       position="sticky"
       elevation={0}
-      sx={{ background: "var(--color-bg)", borderBottom: "1px solid var(--color-border)" }}
+      sx={{
+        background: "var(--color-bg)",
+        borderBottom: "1px solid var(--color-border)"
+      }}
     >
       <Toolbar
         disableGutters
@@ -25,20 +29,22 @@ export default function HeaderDesktop() {
           width: "100%",
           display: "flex",
           justifyContent: "space-between",
-          alignItems: "center",
+          alignItems: "center"
         }}
       >
         <div className="header-logo">
-          <Box
-            className="header-logo"
-            component="img"
-            src={logo}
-            alt="Logo PROTEGIX"
-            sx={{
-              width: 30,
-              objectFit: "contain"
-            }}
-          />
+          <Link to="/">
+            <Box
+              className="header-logo"
+              component="img"
+              src={logo}
+              alt="Logo PROTEGIX"
+              sx={{
+                width: 30,
+                objectFit: "contain"
+              }}
+            />
+          </Link>
         </div>
         <div
           className="header-nav-desktop"
