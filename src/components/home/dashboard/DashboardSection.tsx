@@ -25,8 +25,10 @@ export default function DashboardSection() {
           <p className={styles.dashboardMainSubtitle}>
             Este projeto contribui com os{" "}
             <b>Objetivos de Desenvolvimento Sustentável (ODS)</b>, especialmente
-            a <b>ODS 16</b>, promovendo segurança digital e acesso consciente à
-            informação.
+            as <b>ODS 4, 9 e 16</b>, ao promover educação em segurança digital,
+            uso da tecnologia para conscientização e análise de dados, além de
+            incentivar o acesso consciente à informação e a proteção no ambiente
+            digital.
           </p>
           <p className={styles.totalRespostasText}>
             {loadingTotalRespostas

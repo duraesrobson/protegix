@@ -60,6 +60,10 @@ export default function AppButton({
         },
         lineHeight: 1,
         minWidth: 0,
+        width: {
+          xs: "100%",
+          sm: "auto"
+        },
         borderRadius: {
           xs: "12px",
           sm: "16px"
