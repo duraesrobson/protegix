@@ -5,6 +5,7 @@ import styles from "./DashboardSection.module.scss"
 import LineChartCard from "../../charts/LineChartCard"
 import { useTotalResponses } from "../../../hooks/useTotalResponses"
 import FeedbackListCard from "../../charts/FeedbackListCard"
+import AiInsightCard from "../../charts/AiInsightCard"
 
 export default function DashboardSection() {
   const { totalRespostas, loading: loadingTotalRespostas } = useTotalResponses({
@@ -327,6 +328,27 @@ export default function DashboardSection() {
                 titulo="Maiores Riscos Percebidos na Tecnologia"
                 perguntaId="feedbacks"
               />
+            </article>
+          </div>
+        </section>
+
+        <hr className={styles.sectionDivider} />
+
+        <section className={styles.dashboardContentSection}>
+          <header className={styles.dashboardSectionHeader}>
+            <h2 className={styles.dashboardSectionTitle}>
+              Análise Geral dos Dados
+            </h2>
+            <p className={styles.dashboardSectionDescription}>
+              <span>Leitura automatizada:</span> Um resumo interpretativo dos
+              padrões observados nas respostas coletadas sobre segurança
+              digital, uso de IA e proteção de dados.
+            </p>
+          </header>
+
+          <div className={styles.chartsGrid}>
+            <article className={styles.chartWrapper}>
+              <AiInsightCard />
             </article>
           </div>
         </section>
