@@ -13,10 +13,24 @@ export default function CrossAnalysisSection({
   loadingCrossAnalysis,
   crossAnalysisError
 }: CrossAnalysisSectionProps) {
+  const order = [
+    "verifica_sites_x_golpe",
+    "tempo_uso_x_golpe",
+    "frequencia_ia_x_verificacao_ia",
+    "escolaridade_x_lgpd",
+    "faixa_etaria_x_2fa",
+    "lgpd_x_leitura_termos"
+  ]
+
   const sortedCrossAnalysis = [...crossAnalysisData].sort((a, b) => {
-    if (a.id === "verifica_sites_x_golpe") return -1
-    if (b.id === "verifica_sites_x_golpe") return 1
-    return 0
+    const indexA = order.indexOf(a.id)
+    const indexB = order.indexOf(b.id)
+
+    if (indexA === -1 && indexB === -1) return 0
+    if (indexA === -1) return 1
+    if (indexB === -1) return -1
+
+    return indexA - indexB
   })
 
   return (

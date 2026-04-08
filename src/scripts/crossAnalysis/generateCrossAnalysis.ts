@@ -4,7 +4,6 @@ import { admin, adminDb } from "../../lib/firebaseAdmin"
 import type { FirestoreAnswer } from "../insightHelpers"
 import {
   groupAnswersByParticipant,
-  crossTabulate,
   crossTabulateWithPercentages,
   type FirestoreDoc
 } from "./crossAnalysis"
@@ -51,18 +50,20 @@ async function generateCrossInsight(crossData: CrossAnalysisTableInput) {
 Analise o cruzamento de respostas abaixo em português do Brasil.
 
 Regras:
-- escreva apenas 1 parágrafo
-- linguagem clara, objetiva e acadêmica
+ escreva apenas 1 parágrafo
+- linguagem clara, objetiva e acadêmica, mas natural
 - no máximo 80 palavras
 - explique apenas os padrões observados nos dados
 - não invente informações
 - não use lista
 - não afirme relação de causa e efeito
-- trate os achados como associação, indício ou tendência observada
-- use expressões como "observa-se", "os dados indicam", "os dados sugerem"
-- evite conclusões definitivas
-- quando houver poucos casos em algum grupo, mencione que isso limita generalizações
-- não extrapole além do cruzamento apresentado
+- trate os resultados como padrões observados, e não como comprovação
+- priorize a interpretação pelas porcentagens
+- quando houver poucos casos, mencione isso de forma breve e natural, sem repetir sempre a mesma frase
+- varie a forma de iniciar e construir a explicação
+- evite repetir expressões como "os dados indicam", "os dados sugerem", "associação", "tendência observada" e "limita generalizações" em todos os textos
+- escreva como uma análise interpretativa curta de relatório acadêmico, sem soar robótico
+
 
 Dados:
 ${JSON.stringify(crossData, null, 2)}
@@ -122,7 +123,11 @@ async function main() {
 
   console.log("total de participantes agrupados:", participants.length)
 
-  const cross1Raw = crossTabulate(participants, "faixa_etaria", "2fa")
+  const cross1Raw = crossTabulateWithPercentages(
+    participants,
+    "faixa_etaria",
+    "2fa"
+  )
   const cross1Base = buildCrossAnalysisTable({
     id: "faixa_etaria_x_2fa",
     title: "Faixa Etária x Autenticação em Duas Etapas",
@@ -131,7 +136,11 @@ async function main() {
     data: cross1Raw
   }) as CrossAnalysisTableInput
 
-  const cross2Raw = crossTabulate(participants, "escolaridade", "lgpd")
+  const cross2Raw = crossTabulateWithPercentages(
+    participants,
+    "escolaridade",
+    "lgpd"
+  )
   const cross2Base = buildCrossAnalysisTable({
     id: "escolaridade_x_lgpd",
     title: "Escolaridade x Conhecimento sobre LGPD",
@@ -153,7 +162,11 @@ async function main() {
     data: cross3Raw
   }) as CrossAnalysisTableInput
 
-  const cross4Raw = crossTabulate(participants, "tempo_uso", "golpe")
+  const cross4Raw = crossTabulateWithPercentages(
+    participants,
+    "tempo_uso",
+    "golpe"
+  )
   const cross4Base = buildCrossAnalysisTable({
     id: "tempo_uso_x_golpe",
     title: "Tempo de Uso da Internet x Ocorrência de Golpes",
@@ -162,7 +175,11 @@ async function main() {
     data: cross4Raw
   }) as CrossAnalysisTableInput
 
-  const cross5Raw = crossTabulate(participants, "verifica_sites", "golpe")
+  const cross5Raw = crossTabulateWithPercentages(
+    participants,
+    "verifica_sites",
+    "golpe"
+  )
   const cross5Base = buildCrossAnalysisTable({
     id: "verifica_sites_x_golpe",
     title: "Verificação de Sites x Ocorrência de Golpes",
@@ -171,7 +188,11 @@ async function main() {
     data: cross5Raw
   }) as CrossAnalysisTableInput
 
-  const cross6Raw = crossTabulate(participants, "lgpd", "lgpd_termos")
+  const cross6Raw = crossTabulateWithPercentages(
+    participants,
+    "lgpd",
+    "lgpd_termos"
+  )
   const cross6Base = buildCrossAnalysisTable({
     id: "lgpd_x_leitura_termos",
     title: "Conhecimento sobre LGPD x Leitura de Termos de Uso",

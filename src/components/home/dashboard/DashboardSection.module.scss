@@ -137,4 +137,12 @@
       color: var(--color-primary);
     }
   }
+
+  .chartsGrid2 {
+    grid-template-columns: 1fr;
+    & > *:first-child,
+    & > *:last-child {
+      grid-column: span 1;
+    }
+  }
 }

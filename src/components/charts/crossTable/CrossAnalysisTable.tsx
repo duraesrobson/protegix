@@ -15,7 +15,12 @@ function formatCellValue(value: CrossAnalysisCell | undefined) {
     return value
   }
 
-  return `${value.count} (${value.percentage}%)`
+  return (
+    <span className={styles.cellValue}>
+      <span className={styles.count}>{value.count} </span>
+      <span className={styles.percentage}>({value.percentage}%)</span>
+    </span>
+  )
 }
 
 export default function CrossAnalysisTable({

@@ -39,3 +39,31 @@
 .table tbody tr:last-child td {
   border-bottom: none;
 }
+
+.cellValue {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.percentage {
+  font-size: 0.75rem;
+  opacity: 0.5;
+  font-style: italic;
+}
+
+@media (max-width: 900px) {
+  .table th,
+  .table td {
+    padding: 10px 8px;
+    font-size: 12px;
+  }
+
+  .table {
+    min-width: 100%;
+  }
+
+  .percentage {
+    font-size: 10px;
+  }
+}
