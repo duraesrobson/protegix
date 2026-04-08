@@ -386,7 +386,7 @@ export default function DashboardSection() {
               {crossAnalysisError}
             </p>
           ) : (
-            <div className={styles.chartsGrid}>
+            <div className={styles.chartsGrid2}>
               {crossAnalysisData.map(item => (
                 <article key={item.id} className={styles.chartWrapper}>
                   <CrossAnalysisCard data={item} />

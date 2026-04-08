@@ -1,4 +1,7 @@
-import type { CrossAnalysisDoc, CrossAnalysisCell } from "../../../types/crossAnalysisTypes"
+import type {
+  CrossAnalysisDoc,
+  CrossAnalysisCell
+} from "../../../types/crossAnalysisTypes"
 import styles from "./CrossAnalysisTable.module.scss"
 
 type CrossAnalysisTableProps = {
@@ -23,7 +26,11 @@ export default function CrossAnalysisTable({
       <table className={styles.table}>
         <thead>
           <tr>
-            <th>{data.rowLabel}</th>
+            <th rowSpan={2}>{data.rowLabel}</th>
+            <th colSpan={data.columns.length}>{data.columnLabel}</th>
+          </tr>
+
+          <tr>
             {data.columns.map(column => (
               <th key={column}>{column}</th>
             ))}

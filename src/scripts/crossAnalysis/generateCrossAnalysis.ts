@@ -53,11 +53,16 @@ Analise o cruzamento de respostas abaixo em português do Brasil.
 Regras:
 - escreva apenas 1 parágrafo
 - linguagem clara, objetiva e acadêmica
-- explique os principais padrões observados
+- no máximo 80 palavras
+- explique apenas os padrões observados nos dados
 - não invente informações
 - não use lista
-- no máximo 80 palavras
-- destaque apenas o que é possível concluir com base nos dados
+- não afirme relação de causa e efeito
+- trate os achados como associação, indício ou tendência observada
+- use expressões como "observa-se", "os dados indicam", "os dados sugerem"
+- evite conclusões definitivas
+- quando houver poucos casos em algum grupo, mencione que isso limita generalizações
+- não extrapole além do cruzamento apresentado
 
 Dados:
 ${JSON.stringify(crossData, null, 2)}
