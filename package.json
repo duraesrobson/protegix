@@ -9,7 +9,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "debug:responses": "tsx src/scripts/debugResponses.ts",
-    "generate:insight": "tsx src/scripts/generateDashboardInsight.ts"
+    "generate:insight": "tsx src/scripts/generateDashboardInsight.ts",
+    "generate:cross": "tsx src/scripts/crossAnalysis/generateCrossAnalysis.ts"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",

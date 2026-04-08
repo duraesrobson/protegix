@@ -1,0 +1,40 @@
+.tableWrapper {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 720px;
+  background: var(--color-surface);
+}
+
+.table th,
+.table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--color-border);
+  text-align: left;
+  vertical-align: middle;
+}
+
+.table thead th {
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--color-text);
+  font-weight: 700;
+}
+
+.table tbody td {
+  color: var(--color-text-muted);
+}
+
+.rowLabel {
+  color: var(--color-text) !important;
+  font-weight: 600;
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}

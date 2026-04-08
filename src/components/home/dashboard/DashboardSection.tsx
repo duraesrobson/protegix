@@ -6,8 +6,16 @@ import LineChartCard from "../../charts/LineChartCard"
 import { useTotalResponses } from "../../../hooks/useTotalResponses"
 import FeedbackListCard from "../../charts/FeedbackListCard"
 import AiInsightCard from "../../charts/AiInsightCard"
+import CrossAnalysisCard from "../../charts/crossTable/CrossAnalysisCard"
+import { useCrossAnalysis } from "../../../hooks/useCrossAnalysis"
 
 export default function DashboardSection() {
+  const {
+    data: crossAnalysisData,
+    loading: loadingCrossAnalysis,
+    error: crossAnalysisError
+  } = useCrossAnalysis()
+
   const { totalRespostas, loading: loadingTotalRespostas } = useTotalResponses({
     perguntaId: "seg_navegacao"
   })
@@ -351,6 +359,41 @@ export default function DashboardSection() {
               <AiInsightCard />
             </article>
           </div>
+        </section>
+
+        <hr className={styles.sectionDivider} />
+
+        <section className={styles.dashboardContentSection}>
+          <header className={styles.dashboardSectionHeader}>
+            <h2 className={styles.dashboardSectionTitle}>
+              Cruzamento de Respostas
+            </h2>
+            <p className={styles.dashboardSectionDescription}>
+              <span>Relações entre variáveis:</span> Nesta seção, são
+              apresentados cruzamentos entre respostas da pesquisa, permitindo
+              observar padrões entre perfil dos participantes, práticas de
+              segurança digital, uso de IA e conhecimento sobre proteção de
+              dados.
+            </p>
+          </header>
+
+          {loadingCrossAnalysis ? (
+            <p className={styles.dashboardSectionDescription}>
+              carregando análises cruzadas...
+            </p>
+          ) : crossAnalysisError ? (
+            <p className={styles.dashboardSectionDescription}>
+              {crossAnalysisError}
+            </p>
+          ) : (
+            <div className={styles.chartsGrid}>
+              {crossAnalysisData.map(item => (
+                <article key={item.id} className={styles.chartWrapper}>
+                  <CrossAnalysisCard data={item} />
+                </article>
+              ))}
+            </div>
+          )}
         </section>
       </div>
     </section>
