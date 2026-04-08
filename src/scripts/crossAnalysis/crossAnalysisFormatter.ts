@@ -1,4 +1,4 @@
-import type { CrossAnalysisData, CrossAnalysisRow } from "../../types/crossAnalysisTypes"
+import type { CrossAnalysisDoc, CrossAnalysisRow } from "../../types/crossAnalysisTypes"
 
 type CrossTable = Record<
   string,
@@ -19,7 +19,7 @@ export function buildCrossAnalysisTable({
   rowLabel,
   columnLabel,
   data
-}: BuildCrossAnalysisParams): Omit<CrossAnalysisData, "insight"> {
+}: BuildCrossAnalysisParams): Omit<CrossAnalysisDoc, "insight"> {
   const columnSet = new Set<string>()
 
   for (const rowKey of Object.keys(data)) {
