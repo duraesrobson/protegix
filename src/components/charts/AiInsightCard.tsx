@@ -55,15 +55,16 @@ export default function AiInsightCard() {
       <h3 className={styles.title}>Análise Geral dos Dados</h3>
       <p className={styles.text}>{data.content}</p>
 
-      {data.totalParticipantes ? (
-        <small className={styles.notice}>
-          Análise gerada com base em {data.totalParticipantes} participantes.
-        </small>
-      ) : null}
-
       <small className={styles.notice}>
+        {data.totalParticipantes
+          ? `Análise gerada com base em ${data.totalParticipantes} participantes. `
+          : ""}
+        <br />
+        <br />
         Esta análise foi gerada automaticamente por Inteligência Artificial com
-        base em dados agregados e possui caráter interpretativo.
+        base em dados agregados e possui caráter interpretativo. Esses padrões
+        podem ser observados com mais detalhe nos cruzamentos de respostas apresentados a
+        seguir.
       </small>
     </article>
   )
