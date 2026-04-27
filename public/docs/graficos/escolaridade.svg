@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#ffffff"/>
+  <text x="400" y="35" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="16" font-weight="bold" fill="#111827">Grau de Escolaridade</text>
+  <g transform="translate(60, 60)">
+    <line x1="0" y1="340" x2="710" y2="340" stroke="#e5e7eb" stroke-dasharray="2,2"/>
+    <text x="-8" y="344" text-anchor="end" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#6b7280">0</text>
+    <line x1="0" y1="288.4848484848485" x2="710" y2="288.4848484848485" stroke="#e5e7eb" stroke-dasharray="2,2"/>
+    <text x="-8" y="292.4848484848485" text-anchor="end" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#6b7280">5</text>
+    <line x1="0" y1="236.969696969697" x2="710" y2="236.969696969697" stroke="#e5e7eb" stroke-dasharray="2,2"/>
+    <text x="-8" y="240.969696969697" text-anchor="end" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#6b7280">10</text>
+    <line x1="0" y1="185.45454545454544" x2="710" y2="185.45454545454544" stroke="#e5e7eb" stroke-dasharray="2,2"/>
+    <text x="-8" y="189.45454545454544" text-anchor="end" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#6b7280">15</text>
+    <line x1="0" y1="133.93939393939394" x2="710" y2="133.93939393939394" stroke="#e5e7eb" stroke-dasharray="2,2"/>
+    <text x="-8" y="137.93939393939394" text-anchor="end" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#6b7280">20</text>
+    <line x1="0" y1="82.42424242424242" x2="710" y2="82.42424242424242" stroke="#e5e7eb" stroke-dasharray="2,2"/>
+    <text x="-8" y="86.42424242424242" text-anchor="end" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#6b7280">25</text>
+    <line x1="0" y1="30.90909090909092" x2="710" y2="30.90909090909092" stroke="#e5e7eb" stroke-dasharray="2,2"/>
+    <text x="-8" y="34.90909090909092" text-anchor="end" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#6b7280">30</text>
+    <rect x="31.666666666666664" y="288.4848484848485" width="55" height="51.5151515151515" fill="#0ea5e9" rx="2"/>
+    <text x="59.166666666666664" y="282.4848484848485" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="11" font-weight="bold" fill="#374151">5%</text>
+    <rect x="150" y="329.6969696969697" width="55" height="10.303030303030312" fill="#10b981" rx="2"/>
+    <text x="177.5" y="323.6969696969697" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="11" font-weight="bold" fill="#374151">1%</text>
+    <rect x="268.3333333333333" y="10.303030303030294" width="55" height="329.6969696969697" fill="#fbbf24" rx="2"/>
+    <text x="295.8333333333333" y="4.303030303030294" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="11" font-weight="bold" fill="#374151">32%</text>
+    <rect x="386.66666666666663" y="298.7878787878788" width="55" height="41.21212121212119" fill="#8b5cf6" rx="2"/>
+    <text x="414.16666666666663" y="292.7878787878788" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="11" font-weight="bold" fill="#374151">4%</text>
+    <rect x="505" y="92.72727272727272" width="55" height="247.27272727272728" fill="#f43f5e" rx="2"/>
+    <text x="532.5" y="86.72727272727272" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="11" font-weight="bold" fill="#374151">24%</text>
+    <rect x="623.3333333333333" y="0" width="55" height="340" fill="#06b6d4" rx="2"/>
+    <text x="650.8333333333333" y="-6" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="11" font-weight="bold" fill="#374151">33%</text>
+    <line x1="0" y1="0" x2="0" y2="340" stroke="#000000" stroke-width="1"/>
+    <text x="59.166666666666664" y="358" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#1f2937">Ensino fundamental</text>
+    <text x="59.166666666666664" y="371" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#1f2937">completo</text>
+    <text x="177.5" y="358" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#1f2937">Ensino fundamental</text>
+    <text x="177.5" y="371" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#1f2937">incompleto</text>
+    <text x="295.8333333333333" y="358" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#1f2937">Ensino médio</text>
+    <text x="295.8333333333333" y="371" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#1f2937">completo</text>
+    <text x="414.16666666666663" y="358" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#1f2937">Ensino médio</text>
+    <text x="414.16666666666663" y="371" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#1f2937">incompleto</text>
+    <text x="532.5" y="358" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#1f2937">Ensino superior</text>
+    <text x="532.5" y="371" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#1f2937">completo</text>
+    <text x="650.8333333333333" y="358" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#1f2937">Ensino superior</text>
+    <text x="650.8333333333333" y="371" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#1f2937">incompleto</text>
+  </g>
+</svg>

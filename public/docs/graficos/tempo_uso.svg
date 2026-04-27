@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#ffffff"/>
+  <text x="400" y="35" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="16" font-weight="bold" fill="#111827">Exposição Diária à Rede</text>
+  <g transform="translate(60, 60)">
+    <line x1="0" y1="340" x2="710" y2="340" stroke="#e5e7eb" stroke-dasharray="2,2"/>
+    <text x="-8" y="344" text-anchor="end" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#6b7280">0</text>
+    <line x1="0" y1="291.42857142857144" x2="710" y2="291.42857142857144" stroke="#e5e7eb" stroke-dasharray="2,2"/>
+    <text x="-8" y="295.42857142857144" text-anchor="end" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#6b7280">5</text>
+    <line x1="0" y1="242.85714285714286" x2="710" y2="242.85714285714286" stroke="#e5e7eb" stroke-dasharray="2,2"/>
+    <text x="-8" y="246.85714285714286" text-anchor="end" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#6b7280">10</text>
+    <line x1="0" y1="194.28571428571428" x2="710" y2="194.28571428571428" stroke="#e5e7eb" stroke-dasharray="2,2"/>
+    <text x="-8" y="198.28571428571428" text-anchor="end" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#6b7280">15</text>
+    <line x1="0" y1="145.71428571428572" x2="710" y2="145.71428571428572" stroke="#e5e7eb" stroke-dasharray="2,2"/>
+    <text x="-8" y="149.71428571428572" text-anchor="end" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#6b7280">20</text>
+    <line x1="0" y1="97.14285714285714" x2="710" y2="97.14285714285714" stroke="#e5e7eb" stroke-dasharray="2,2"/>
+    <text x="-8" y="101.14285714285714" text-anchor="end" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#6b7280">25</text>
+    <line x1="0" y1="48.57142857142859" x2="710" y2="48.57142857142859" stroke="#e5e7eb" stroke-dasharray="2,2"/>
+    <text x="-8" y="52.57142857142859" text-anchor="end" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#6b7280">30</text>
+    <line x1="0" y1="0" x2="710" y2="0" stroke="#e5e7eb" stroke-dasharray="2,2"/>
+    <text x="-8" y="4" text-anchor="end" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#6b7280">35</text>
+    <rect x="61.25" y="19.428571428571434" width="55" height="320.57142857142856" fill="#0ea5e9" rx="2"/>
+    <text x="88.75" y="13.428571428571434" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="11" font-weight="bold" fill="#374151">33%</text>
+    <rect x="238.75" y="0" width="55" height="340" fill="#10b981" rx="2"/>
+    <text x="266.25" y="-6" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="11" font-weight="bold" fill="#374151">35%</text>
+    <rect x="416.25" y="281.7142857142857" width="55" height="58.28571428571428" fill="#fbbf24" rx="2"/>
+    <text x="443.75" y="275.7142857142857" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="11" font-weight="bold" fill="#374151">6%</text>
+    <rect x="593.75" y="87.42857142857142" width="55" height="252.57142857142858" fill="#8b5cf6" rx="2"/>
+    <text x="621.25" y="81.42857142857142" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="11" font-weight="bold" fill="#374151">26%</text>
+    <line x1="0" y1="0" x2="0" y2="340" stroke="#000000" stroke-width="1"/>
+    <text x="88.75" y="358" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#1f2937">3h a</text>
+    <text x="88.75" y="371" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#1f2937">6h</text>
+    <text x="266.25" y="358" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#1f2937">Mais de</text>
+    <text x="266.25" y="371" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#1f2937">6h</text>
+    <text x="443.75" y="358" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#1f2937">Menos de</text>
+    <text x="443.75" y="371" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#1f2937">3h</text>
+    <text x="621.25" y="358" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#1f2937">O tempo</text>
+    <text x="621.25" y="371" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#1f2937">todo</text>
+  </g>
+</svg>

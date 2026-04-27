@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#ffffff"/>
+  <text x="400" y="35" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="16" font-weight="bold" fill="#111827">Nível de Conhecimento LGPD</text>
+  <g transform="translate(60, 60)">
+    <line x1="0" y1="340" x2="710" y2="340" stroke="#e5e7eb" stroke-dasharray="2,2"/>
+    <text x="-8" y="344" text-anchor="end" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#6b7280">0</text>
+    <line x1="0" y1="259.04761904761904" x2="710" y2="259.04761904761904" stroke="#e5e7eb" stroke-dasharray="2,2"/>
+    <text x="-8" y="263.04761904761904" text-anchor="end" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#6b7280">10</text>
+    <line x1="0" y1="178.0952380952381" x2="710" y2="178.0952380952381" stroke="#e5e7eb" stroke-dasharray="2,2"/>
+    <text x="-8" y="182.0952380952381" text-anchor="end" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#6b7280">20</text>
+    <line x1="0" y1="97.14285714285714" x2="710" y2="97.14285714285714" stroke="#e5e7eb" stroke-dasharray="2,2"/>
+    <text x="-8" y="101.14285714285714" text-anchor="end" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#6b7280">30</text>
+    <line x1="0" y1="16.190476190476208" x2="710" y2="16.190476190476208" stroke="#e5e7eb" stroke-dasharray="2,2"/>
+    <text x="-8" y="20.190476190476208" text-anchor="end" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#6b7280">40</text>
+    <rect x="61.25" y="299.5238095238095" width="55" height="40.47619047619048" fill="#0ea5e9" rx="2"/>
+    <text x="88.75" y="293.5238095238095" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="11" font-weight="bold" fill="#374151">5%</text>
+    <rect x="238.75" y="8.095238095238104" width="55" height="331.90476190476187" fill="#10b981" rx="2"/>
+    <text x="266.25" y="2.095238095238104" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="11" font-weight="bold" fill="#374151">41%</text>
+    <rect x="416.25" y="0" width="55" height="340" fill="#fbbf24" rx="2"/>
+    <text x="443.75" y="-6" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="11" font-weight="bold" fill="#374151">42%</text>
+    <rect x="593.75" y="242.85714285714286" width="55" height="97.14285714285714" fill="#8b5cf6" rx="2"/>
+    <text x="621.25" y="236.85714285714286" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="11" font-weight="bold" fill="#374151">12%</text>
+    <line x1="0" y1="0" x2="0" y2="340" stroke="#000000" stroke-width="1"/>
+    <text x="88.75" y="358" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#1f2937">Alto</text>
+    <text x="266.25" y="358" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#1f2937">Baixo</text>
+    <text x="443.75" y="358" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#1f2937">Médio</text>
+    <text x="621.25" y="358" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#1f2937">Nenhum</text>
+  </g>
+</svg>

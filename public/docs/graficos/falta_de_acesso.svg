@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#ffffff"/>
+  <text x="400" y="35" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="16" font-weight="bold" fill="#111827">Impacto da Falta de Acesso</text>
+  <g transform="translate(60, 60)">
+    <line x1="0" y1="340" x2="710" y2="340" stroke="#e5e7eb" stroke-dasharray="2,2"/>
+    <text x="-8" y="344" text-anchor="end" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#6b7280">0</text>
+    <line x1="0" y1="273.33333333333337" x2="710" y2="273.33333333333337" stroke="#e5e7eb" stroke-dasharray="2,2"/>
+    <text x="-8" y="277.33333333333337" text-anchor="end" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#6b7280">10</text>
+    <line x1="0" y1="206.66666666666669" x2="710" y2="206.66666666666669" stroke="#e5e7eb" stroke-dasharray="2,2"/>
+    <text x="-8" y="210.66666666666669" text-anchor="end" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#6b7280">20</text>
+    <line x1="0" y1="140" x2="710" y2="140" stroke="#e5e7eb" stroke-dasharray="2,2"/>
+    <text x="-8" y="144" text-anchor="end" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#6b7280">30</text>
+    <line x1="0" y1="73.33333333333334" x2="710" y2="73.33333333333334" stroke="#e5e7eb" stroke-dasharray="2,2"/>
+    <text x="-8" y="77.33333333333334" text-anchor="end" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#6b7280">40</text>
+    <line x1="0" y1="6.66666666666668" x2="710" y2="6.66666666666668" stroke="#e5e7eb" stroke-dasharray="2,2"/>
+    <text x="-8" y="10.66666666666668" text-anchor="end" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#6b7280">50</text>
+    <rect x="150" y="13.333333333333323" width="55" height="326.6666666666667" fill="#0ea5e9" rx="2"/>
+    <text x="177.5" y="7.333333333333323" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="11" font-weight="bold" fill="#374151">49%</text>
+    <rect x="505" y="0" width="55" height="340" fill="#10b981" rx="2"/>
+    <text x="532.5" y="-6" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="11" font-weight="bold" fill="#374151">51%</text>
+    <line x1="0" y1="0" x2="0" y2="340" stroke="#000000" stroke-width="1"/>
+    <text x="177.5" y="358" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#1f2937">Não</text>
+    <text x="532.5" y="358" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#1f2937">Sim</text>
+  </g>
+</svg>

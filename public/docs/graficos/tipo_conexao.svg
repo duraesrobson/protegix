@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#ffffff"/>
+  <text x="400" y="35" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="16" font-weight="bold" fill="#111827">Tecnologias de Conexão Utilizadas</text>
+  <g transform="translate(60, 60)">
+    <line x1="0" y1="340" x2="710" y2="340" stroke="#e5e7eb" stroke-dasharray="2,2"/>
+    <text x="-8" y="344" text-anchor="end" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#6b7280">0</text>
+    <line x1="0" y1="244.22535211267603" x2="710" y2="244.22535211267603" stroke="#e5e7eb" stroke-dasharray="2,2"/>
+    <text x="-8" y="248.22535211267603" text-anchor="end" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#6b7280">20</text>
+    <line x1="0" y1="148.4507042253521" x2="710" y2="148.4507042253521" stroke="#e5e7eb" stroke-dasharray="2,2"/>
+    <text x="-8" y="152.4507042253521" text-anchor="end" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#6b7280">40</text>
+    <line x1="0" y1="52.676056338028175" x2="710" y2="52.676056338028175" stroke="#e5e7eb" stroke-dasharray="2,2"/>
+    <text x="-8" y="56.676056338028175" text-anchor="end" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#6b7280">60</text>
+    <rect x="43.5" y="330.42253521126764" width="55" height="9.577464788732357" fill="#0ea5e9" rx="2"/>
+    <text x="71" y="324.42253521126764" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="11" font-weight="bold" fill="#374151">2%</text>
+    <rect x="185.5" y="229.85915492957747" width="55" height="110.14084507042253" fill="#10b981" rx="2"/>
+    <text x="213" y="223.85915492957747" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="11" font-weight="bold" fill="#374151">23%</text>
+    <rect x="327.5" y="330.42253521126764" width="55" height="9.577464788732357" fill="#fbbf24" rx="2"/>
+    <text x="355" y="324.42253521126764" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="11" font-weight="bold" fill="#374151">2%</text>
+    <rect x="469.5" y="0" width="55" height="340" fill="#8b5cf6" rx="2"/>
+    <text x="497" y="-6" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="11" font-weight="bold" fill="#374151">72%</text>
+    <rect x="611.5" y="335.2112676056338" width="55" height="4.788732394366207" fill="#f43f5e" rx="2"/>
+    <text x="639" y="329.2112676056338" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="11" font-weight="bold" fill="#374151">1%</text>
+    <line x1="0" y1="0" x2="0" y2="340" stroke="#000000" stroke-width="1"/>
+    <text x="71" y="358" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#1f2937">Cabo de</text>
+    <text x="71" y="371" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#1f2937">Rede (Ethernet)</text>
+    <text x="213" y="358" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#1f2937">Dados Móveis</text>
+    <text x="213" y="371" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#1f2937">(4G/5G)</text>
+    <text x="355" y="358" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#1f2937">Trabalho/Faculdade</text>
+    <text x="497" y="358" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#1f2937">Wi-Fi Privado</text>
+    <text x="497" y="371" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#1f2937">(Casa/Trabalho)</text>
+    <text x="639" y="358" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#1f2937">Wi-Fi Público</text>
+    <text x="639" y="371" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#1f2937">(Shopping/Café)</text>
+  </g>
+</svg>

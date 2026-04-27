@@ -10,7 +10,9 @@
     "preview": "vite preview",
     "debug:responses": "tsx src/scripts/debugResponses.ts",
     "generate:insight": "tsx src/scripts/generateDashboardInsight.ts",
-    "generate:cross": "tsx src/scripts/crossAnalysis/generateCrossAnalysis.ts"
+    "generate:cross": "tsx src/scripts/crossAnalysis/generateCrossAnalysis.ts",
+    "generate:svg": "tsx src/scripts/export-svg-charts.ts",
+    "generate:responses-analysis": "tsx src/scripts/generatePerQuestionAnalysis.ts"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -29,11 +31,13 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.39.4",
+    "@types/d3": "^7.4.3",
     "@types/node": "^24.12.0",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@vercel/node": "^5.6.22",
     "@vitejs/plugin-react": "^6.0.1",
+    "d3": "^7.9.0",
     "eslint": "^9.39.4",
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.5.2",

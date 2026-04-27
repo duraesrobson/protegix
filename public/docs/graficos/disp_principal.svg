@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#ffffff"/>
+  <text x="400" y="35" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="16" font-weight="bold" fill="#111827">Principal Dispositivo de Acesso</text>
+  <g transform="translate(60, 60)">
+    <line x1="0" y1="340" x2="710" y2="340" stroke="#e5e7eb" stroke-dasharray="2,2"/>
+    <text x="-8" y="344" text-anchor="end" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#6b7280">0</text>
+    <line x1="0" y1="262.72727272727275" x2="710" y2="262.72727272727275" stroke="#e5e7eb" stroke-dasharray="2,2"/>
+    <text x="-8" y="266.72727272727275" text-anchor="end" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#6b7280">20</text>
+    <line x1="0" y1="185.45454545454544" x2="710" y2="185.45454545454544" stroke="#e5e7eb" stroke-dasharray="2,2"/>
+    <text x="-8" y="189.45454545454544" text-anchor="end" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#6b7280">40</text>
+    <line x1="0" y1="108.1818181818182" x2="710" y2="108.1818181818182" stroke="#e5e7eb" stroke-dasharray="2,2"/>
+    <text x="-8" y="112.1818181818182" text-anchor="end" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#6b7280">60</text>
+    <line x1="0" y1="30.90909090909092" x2="710" y2="30.90909090909092" stroke="#e5e7eb" stroke-dasharray="2,2"/>
+    <text x="-8" y="34.90909090909092" text-anchor="end" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#6b7280">80</text>
+    <rect x="90.83333333333333" y="0" width="55" height="340" fill="#0ea5e9" rx="2"/>
+    <text x="118.33333333333333" y="-6" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="11" font-weight="bold" fill="#374151">88%</text>
+    <rect x="327.5" y="320.6818181818182" width="55" height="19.318181818181813" fill="#10b981" rx="2"/>
+    <text x="355" y="314.6818181818182" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="11" font-weight="bold" fill="#374151">5%</text>
+    <rect x="564.1666666666666" y="312.95454545454544" width="55" height="27.04545454545456" fill="#fbbf24" rx="2"/>
+    <text x="591.6666666666666" y="306.95454545454544" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="11" font-weight="bold" fill="#374151">7%</text>
+    <line x1="0" y1="0" x2="0" y2="340" stroke="#000000" stroke-width="1"/>
+    <text x="118.33333333333333" y="358" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#1f2937">Celular</text>
+    <text x="355" y="358" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#1f2937">Computador</text>
+    <text x="591.6666666666666" y="358" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#1f2937">Notebook</text>
+  </g>
+</svg>

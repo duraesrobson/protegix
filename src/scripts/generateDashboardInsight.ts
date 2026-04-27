@@ -135,10 +135,12 @@ Regras:
 - use principalmente o campo "titulo" para interpretar cada pergunta
 - destaque padrões positivos e fragilidades
 - comente segurança digital, hábitos online, uso de IA e proteção de dados
+- nao use palavras interpretativas como "predominantemente", "maioria". troque por porcentagens
+- comparação entre grupos se pertinente à análise 
 - não invente informações
 - não use lista
 - mantenha tom interpretativo
-- no máximo 300 palavras
+- no máximo 500 palavras
 - evite jargões técnicos
 - use linguagem acessível para público geral
 
@@ -164,8 +166,8 @@ ${JSON.stringify(summary, null, 2)}
       }
 
       return text
-    } catch (error: any) {
-      const status = error?.status
+    } catch (error: unknown) {
+      const status = (error as { status?: number })?.status
       const retryable = status === 503 || status === 429
 
       if (!retryable || attempt === 4) {
