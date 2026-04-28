@@ -110,28 +110,34 @@ export default function AboutPage() {
         <div className={styles.section}>
           <div className={styles.sectionHeader}>
             <h2>Equipe</h2>
-            <p>Alunos do 7º período de Ciência da Computação na UNIG.</p>
+            <p>
+              Conheça as mentes unidads pelo propósito de tornar
+              a internet um lugar mais seguro para todos.
+            </p>
           </div>
           <div className={styles.teamGrid}>
             <TeamMemberCard
               name="Matheus Britto"
-              github="https://github.com/matheusbritto"
-              linkedin="https://linkedin.com/in/matheusbritto"
+              github="https://github.com/"
+              linkedin="https://linkedin.com/in/"
             />
             <TeamMemberCard
               name="Mikaella Teixeira"
               github="https://github.com/Mikaella16"
               linkedin="https://linkedin.com/in/mikaella-teixeira"
+              image="https://i.ibb.co/Lz0yvHRW/foto-mikaella.jpg"
             />
             <TeamMemberCard
               name="Robson Durães"
               github="https://github.com/duraesrobson"
               linkedin="https://linkedin.com/in/robson-duraes"
+              image="https://github.com/duraesrobson.png"
             />
             <TeamMemberCard
               name="Salatiel Martins"
-              github="https://github.com/"
-              linkedin="https://linkedin.com/"
+              github="https://github.com/tielmuzi"
+              linkedin="https://linkedin.com/salatiel-muzi-martins"
+              image="https://i.ibb.co/6R6hqKvz/foto-salatiel.jpg"
             />
           </div>
         </div>
