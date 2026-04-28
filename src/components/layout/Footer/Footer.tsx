@@ -1,4 +1,5 @@
-import { AppBar } from "@mui/material"
+import { AppBar, IconButton } from "@mui/material"
+import GitHubIcon from "@mui/icons-material/GitHub"
 import logo from "../../../assets/protegix-logo-sec.svg"
 import "./footer.css"
 
@@ -25,6 +26,14 @@ export default function Footer() {
         </p>
 
         <p className="footer-copyright">
+          <IconButton
+            href="https://github.com/duraesrobson/protegix"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+          >
+            <GitHubIcon />
+          </IconButton>
           Protegix © 2026. Todos os direitos reservados.
         </p>
       </div>
