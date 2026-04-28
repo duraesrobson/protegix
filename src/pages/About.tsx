@@ -111,8 +111,8 @@ export default function AboutPage() {
           <div className={styles.sectionHeader}>
             <h2>Equipe</h2>
             <p>
-              Conheça as mentes unidads pelo propósito de tornar
-              a internet um lugar mais seguro para todos.
+              Conheça as mentes unidas pelo propósito de tornar a internet um
+              lugar mais seguro para todos.
             </p>
           </div>
           <div className={styles.teamGrid}>
