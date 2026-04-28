@@ -92,6 +92,11 @@ Plataforma educativa completa desenvolvida com foco em conscientização e educa
 ```
 src/
 ├── components/
+│   ├── about/               # Componentes da página Sobre
+│   │   ├── FeatureCard.tsx
+│   │   ├── FeatureCard.module.scss
+│   │   ├── TeamMemberCard.tsx
+│   │   └── TeamMemberCard.module.scss
 │   ├── charts/              # Componentes de visualização
 │   │   ├── BarChartCard.tsx
 │   │   ├── LineChartCard.tsx
@@ -127,10 +132,25 @@ src/
 ├── lib/
 │   └── firebase.ts          # Configuração do Firebase
 ├── pages/
+│   ├── About.tsx            # Página Sobre + Equipe
+│   ├── About.module.scss
 │   ├── Home.tsx             # Dashboard principal
 │   ├── QuizPage.tsx         # Página do quiz + leaderboard
 │   ├── dashboard/
 │   └── learn/               # Página educativa
+│       ├── LearnPage.tsx
+│       └── LearnPage.module.scss
+├── scripts/                  # Scripts utilitários
+│   ├── export-svg-charts.ts             # Exporta gráficos para SVG
+│   ├── generateDashboardInsight.ts     # Gera insights IA do dashboard
+│   ├── generatePerQuestionAnalysis.ts   # Análise por pergunta
+│   ├── insightHelpers.ts               # Helpers para análise de insights
+│   ├── insightMeta.ts                  # Metadados de insights
+│   ├── questionMetadata.ts             # Metadados das perguntas
+│   └── crossAnalysis/                  # Análise cruzada
+│       ├── crossAnalysis.ts             # Lógica de cruzamento
+│       ├── crossAnalysisFormatter.ts    # Formatação de tabelas
+│       └── generateCrossAnalysis.ts    # Gera análise cruzada com IA
 ├── styles/
 │   ├── index.css            # Estilos globais
 │   └── theme.css            # Variáveis de tema
