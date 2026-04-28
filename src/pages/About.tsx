@@ -120,18 +120,18 @@ export default function AboutPage() {
             />
             <TeamMemberCard
               name="Mikaella Teixeira"
-              github="https://github.com/mikaellateixeira"
-              linkedin="https://linkedin.com/in/mikaellateixeira"
+              github="https://github.com/Mikaella16"
+              linkedin="https://linkedin.com/in/mikaella-teixeira"
             />
             <TeamMemberCard
               name="Robson Durães"
               github="https://github.com/duraesrobson"
-              linkedin="https://linkedin.com/in/duraesrobson"
+              linkedin="https://linkedin.com/in/robson-duraes"
             />
             <TeamMemberCard
               name="Salatiel Martins"
-              github="https://github.com/salatielmartins"
-              linkedin="https://linkedin.com/in/salatielmartins"
+              github="https://github.com/"
+              linkedin="https://linkedin.com/"
             />
           </div>
         </div>
