@@ -7,5 +7,6 @@ export const headerNavLinks = [
   { to: "/", label: "Início", icon: HomeOutlinedIcon },
   { to: "/aprenda", label: "Aprenda", icon: SchoolOutlinedIcon },
   { to: "/quiz", label: "Quiz", icon: QuizOutlinedIcon },
-  { to: "/dashboard", label: "Dashboard", icon: DashboardOutlined }
+  { to: "/dashboard", label: "Dashboard", icon: DashboardOutlined },
+  { to: "/sobre", label: "Sobre Nós", icon: HomeOutlinedIcon }
 ]

@@ -4,6 +4,7 @@ import Home from "./pages/Home"
 import QuizPage from "./pages/QuizPage"
 import LearnPage from "./pages/learn/LearnPage"
 import DashboardPage from "./pages/dashboard/DashboardPage"
+import AboutPage from "./pages/About"
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
         <Route path="/quiz" element={<QuizPage />} />
         <Route path="/aprenda" element={<LearnPage />} />
         <Route path="/dashboard" element={<DashboardPage />} />
+        <Route path="/sobre" element={<AboutPage />} />
       </Routes>
     </AppLayout>
   )
