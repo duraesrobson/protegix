@@ -1,0 +1,19 @@
+dimensao;indicador;valor;unidade
+Higiene Digital;senhas_diferentes (sempre);27%;respondentes
+Higiene Digital;2fa (sim);35%;respondentes
+Higiene Digital;2fa (em algumas contas);33%;respondentes
+Higiene Digital;verifica_sites (sempre);48%;respondentes
+Higiene Digital;disp_atualizacao (sempre);58%;respondentes
+Exposicao Digital;tempo_uso (>6h);35%;respondentes
+Exposicao Digital;tempo_uso (tempo todo);26%;respondentes
+Exposicao Digital;disp_principal (celular);88%;respondentes
+Exposicao Digital;golpe (sim);36%;respondentes
+Letramento LGPD;lgpd (sim);68%;respondentes
+Letramento LGPD;lgpd_nivel (alto);5%;respondentes
+Letramento LGPD;lgpd_nivel (medio);42%;respondentes
+Letramento LGPD;lgpd_termos (nunca le);50%;respondentes
+Letramento LGPD;lgpd_uso (deixou de usar);83%;respondentes
+Adocao IA;utiliza_ia (sim);80%;respondentes
+Adocao IA;frequencia_ia (diariamente);45%;respondentes
+Adocao IA;confianca_ia (muito);12%;respondentes
+Adocao IA;verificacao_ia (sempre);32%;respondentes

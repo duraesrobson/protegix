@@ -1,0 +1,81 @@
+pergunta_id;pergunta;resposta;contagem;percentual
+faixa_etaria;Distribuição por grupos de idade;Menos de 18 anos;;2%
+faixa_etaria;Distribuição por grupos de idade;18 a 24 anos;;30%
+faixa_etaria;Distribuição por grupos de idade;25 a 34 anos;;34%
+faixa_etaria;Distribuição por grupos de idade;35 a 44 anos;;11%
+faixa_etaria;Distribuição por grupos de idade;45 anos ou mais;;23%
+escolaridade;Grau de escolaridade;Ensino fundamental incompleto;;1%
+escolaridade;Grau de escolaridade;Ensino fundamental completo;;5%
+escolaridade;Grau de escolaridade;Ensino médio incompleto;;4%
+escolaridade;Grau de escolaridade;Ensino médio completo;;32%
+escolaridade;Grau de escolaridade;Ensino superior incompleto;;33%
+escolaridade;Grau de escolaridade;Ensino superior completo;;24%
+tempo_uso;Exposição diária à rede;Menos de 3h;;6%
+tempo_uso;Exposição diária à rede;3h a 6h;;33%
+tempo_uso;Exposição diária à rede;Mais de 6h;;35%
+tempo_uso;Exposição diária à rede;O tempo todo;;26%
+tipo_conexao;Tecnologias de conexão utilizadas;Wi-Fi Privado (Casa/Trabalho);;71%
+tipo_conexao;Tecnologias de conexão utilizadas;Dados Móveis (4G/5G);;23%
+tipo_conexao;Tecnologias de conexão utilizadas;Trabalho/Faculdade;;2%
+tipo_conexao;Tecnologias de conexão utilizadas;Cabo de Rede (Ethernet);;2%
+tipo_conexao;Tecnologias de conexão utilizadas;Wi-Fi Público (Shopping/Café);;1%
+senhas_diferentes;Diversificação de senhas entre serviços;Sempre;;27%
+senhas_diferentes;Diversificação de senhas entre serviços;Às vezes;;65%
+senhas_diferentes;Diversificação de senhas entre serviços;Nunca;;9%
+2fa;Adoção de autenticação em duas etapas;Sim;;35%
+2fa;Adoção de autenticação em duas etapas;Em algumas contas;;33%
+2fa;Adoção de autenticação em duas etapas;Não;;22%
+2fa;Adoção de autenticação em duas etapas;Não sei o que é;;11%
+golpe;Incidência de vítimas de golpes online;Sim;;36%
+golpe;Incidência de vítimas de golpes online;Não;;56%
+golpe;Incidência de vítimas de golpes online;Não tenho certeza;;8%
+disp_principal;Principal dispositivo de acesso à internet;Celular;;88%
+disp_principal;Principal dispositivo de acesso à internet;Notebook;;7%
+disp_principal;Principal dispositivo de acesso à internet;Computador;;5%
+disp_atualizacao;Atualização de dispositivos;Sempre;;58%
+disp_atualizacao;Atualização de dispositivos;Às vezes;;27%
+disp_atualizacao;Atualização de dispositivos;Raramente;;14%
+disp_atualizacao;Atualização de dispositivos;Nunca;;2%
+verifica_sites;Verificação da segurança de sites;Sempre;;48%
+verifica_sites;Verificação da segurança de sites;Às vezes;;40%
+verifica_sites;Verificação da segurança de sites;Nunca;;12%
+qualidade_internet;Qualidade da internet;Excelente;;21%
+qualidade_internet;Qualidade da internet;Boa;;52%
+qualidade_internet;Qualidade da internet;Regular;;26%
+qualidade_internet;Qualidade da internet;Ruim;;1%
+falta_de_acesso;Deixou de realizar alguma atividade por falta de acesso à tecnologia;Sim;;51%
+falta_de_acesso;Deixou de realizar alguma atividade por falta de acesso à tecnologia;Não;;49%
+lgpd;Já ouviu falar da LGPD?;Sim;;68%
+lgpd;Já ouviu falar da LGPD?;Não;;32%
+lgpd_nivel;Nível de conhecimento sobre proteção de dados;Alto;;5%
+lgpd_nivel;Nível de conhecimento sobre proteção de dados;Médio;;42%
+lgpd_nivel;Nível de conhecimento sobre proteção de dados;Baixo;;41%
+lgpd_nivel;Nível de conhecimento sobre proteção de dados;Nenhum;;12%
+lgpd_termos;Leitura de termos de uso e políticas de privacidade;Sempre;;7%
+lgpd_termos;Leitura de termos de uso e políticas de privacidade;Às vezes;;44%
+lgpd_termos;Leitura de termos de uso e políticas de privacidade;Nunca;;50%
+lgpd_uso;Deixou de usar algum serviço por preocupações com privacidade;Sim;;83%
+lgpd_uso;Deixou de usar algum serviço por preocupações com privacidade;Não;;18%
+utiliza_ia;Uso de ferramentas de IA generativa;Sim;;80%
+utiliza_ia;Uso de ferramentas de IA generativa;Não;;18%
+frequencia_ia;Frequência de uso de ferramentas de IA;Diariamente;;45%
+frequencia_ia;Frequência de uso de ferramentas de IA;Semanalmente;;23%
+frequencia_ia;Frequência de uso de ferramentas de IA;Raramente;;20%
+frequencia_ia;Frequência de uso de ferramentas de IA;Nunca;;11%
+finalidade_ia;Finalidades de uso da IA;Uso Geral;;38%
+finalidade_ia;Finalidades de uso da IA;Estudos;;21%
+finalidade_ia;Finalidades de uso da IA;Trabalho;;19%
+finalidade_ia;Finalidades de uso da IA;Não utilizo;;15%
+finalidade_ia;Finalidades de uso da IA;Curiosidade;;8%
+confianca_ia;Confiança nas respostas de IA;Muito;;12%
+confianca_ia;Confiança nas respostas de IA;Parcialmente;;64%
+confianca_ia;Confiança nas respostas de IA;Pouco;;15%
+confianca_ia;Confiança nas respostas de IA;Não confio;;8%
+verificacao_ia;Verificação de respostas da IA;Sempre;;32%
+verificacao_ia;Verificação de respostas da IA;Às vezes;;46%
+verificacao_ia;Verificação de respostas da IA;Nunca;;23%
+seg_navegacao;Confiança na navegação comum (média);escala 0-100;;45
+seg_bancos;Confiança em apps de banco (média);escala 0-100;;64
+seg_redes;Confiança em redes sociais (média);escala 0-100;;47
+seg_compras;Confiança em compras online (média);escala 0-100;;46
+seg_email;Confiança no uso de e-mail (média);escala 0-100;;54

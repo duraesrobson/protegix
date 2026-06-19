@@ -244,10 +244,8 @@ async function main() {
 
   const outputPath = path.join(
     process.cwd(),
-    "public",
     "docs",
-    "graficos",
-    "responses-analysis.md"
+    "relatorio-devolutiva.md"
   )
 
   await fs.mkdir(path.dirname(outputPath), { recursive: true })

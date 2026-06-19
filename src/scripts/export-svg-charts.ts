@@ -135,7 +135,7 @@ async function exportCharts() {
 
   console.log(`Total de ${docs.length} respostas encontradas`)
 
-  const outputDir = path.join(process.cwd(), "public", "docs", "graficos")
+  const outputDir = path.join(process.cwd(), "docs", "figuras")
   if (!fs.existsSync(outputDir)) {
     fs.mkdirSync(outputDir, { recursive: true })
   }
